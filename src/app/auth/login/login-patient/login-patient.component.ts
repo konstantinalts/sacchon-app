@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-patient',
@@ -11,31 +11,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class LoginPatientComponent implements OnInit {
 
 
-  loginForm: any;
+  ngOnInit() {}
 
-  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit() {
-
-    this.loginForm = this.formBuilder.group({
-
-      username: ['', [Validators.required, Validators.email]],
-
-      password: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
-
-    });
-
+  onSubmit(f: NgForm){
+    console.log(f.value);
+    console.log(f.valid);
   }
-
-  loginUser() {
-
-    console.log(this.loginForm.get("email"));
-
-    console.log(this.loginForm.get("password"));
-
-  }
-
-
 }
 
 
