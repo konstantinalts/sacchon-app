@@ -10,7 +10,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 export class LoginPatientComponent implements OnInit {
 
-  loginForm;
+
+  loginForm: any;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -18,7 +19,7 @@ export class LoginPatientComponent implements OnInit {
 
     this.loginForm = this.formBuilder.group({
 
-      email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required, Validators.email]],
 
       password: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
 
@@ -32,17 +33,16 @@ export class LoginPatientComponent implements OnInit {
 
     console.log(this.loginForm.get("password"));
 
+  }
+
+
 }
 
 
 
 
-  
 
 
 
-  
 
 
-
-  
