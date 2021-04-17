@@ -1,3 +1,4 @@
+import { MedidataComponent } from './../patient/medidata/medidata.component';
 import { RegisterDoctorComponent } from './register/register-doctor/register-doctor.component';
 import { RegisterPatientComponent } from './register/register-patient/register-patient.component';
 import { LoginDoctorComponent } from './login/login-doctor/login-doctor.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'register/doctor_register', component: RegisterDoctorComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  
 ];
 
 @NgModule({
