@@ -34,8 +34,13 @@
       </div>
       <div class="form-group">
         <label for="registerPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" name="password" ngModel required #password="ngModel"
-          id="registerPassword" placeholder="Enter your password">
+        <input type="password" class="form-control" name="password" ngModel required minlength="8" maxlength="20"
+          #password="ngModel" id="registerPassword" placeholder="Enter your password">
+    </div>
+      <div class="form-group">
+        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" name="confirmPassword" ngModel required minlength="8" maxlength="20"
+          #confirmPassword="ngModel" id="registerConfirmPassword" placeholder="Re-type your password">
       </div>
       <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Register</button>
     </form>
