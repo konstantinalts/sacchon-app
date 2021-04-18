@@ -1,1 +1,14 @@
 <p>my-patients works!</p>
+
+
+<button class="btn btn-primary"(click)="getMyPatients()">SEE YOUR PATIENTS</button>
+<div class="row">
+    <div *ngFor="let myPatient of myPatients">
+        <div class="col-sm-4"></div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">              
+                <a class="nav-link" [routerLink]="['doctor/my-patients/my-patients-data']" routerLinkActive="active">{{myPatient.fname}}, {{myPatient.lname}}</a>
+            </div>
+          </div>
+    </div>
+</div>
