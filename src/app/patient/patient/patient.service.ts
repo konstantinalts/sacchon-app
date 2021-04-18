@@ -14,13 +14,13 @@ export class PatientService {
 
   getPatients():Observable<Patient[]>{
     return this.http.get<Patient[]>(
-      `${this.baseUrl}/patient`
+      `${this.baseUrl}/medical_data`
     )
   }
 
   addPatient(patient: Patient): Observable<Patient>{
     return this.http.post<Patient>(
-      `${this.baseUrl}/patient`,
+      `${this.baseUrl}/medical_data`,
       patient
     )
   }
