@@ -1,5 +1,4 @@
 import { PatientModule } from './patient/patient.module';
-import { MedidataComponent } from './patient/medidata/medidata.component';
 import { AuthModule } from './auth/auth.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +11,7 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

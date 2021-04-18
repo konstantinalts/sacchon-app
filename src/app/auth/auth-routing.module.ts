@@ -1,4 +1,3 @@
-import { MedidataComponent } from './../patient/medidata/medidata.component';
 import { RegisterDoctorComponent } from './register/register-doctor/register-doctor.component';
 import { RegisterPatientComponent } from './register/register-patient/register-patient.component';
 import { LoginDoctorComponent } from './login/login-doctor/login-doctor.component';

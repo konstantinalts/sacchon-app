@@ -1,18 +1,32 @@
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './../app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MedidataComponent } from './medidata/medidata.component';
+import { PatientComponent } from './patient/patient.component';
+import { MedidataInsertComponent } from './patient/medidata-insert/medidata-insert.component';
+import { MedidataViewComponent } from './patient/medidata-view/medidata-view.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
 @NgModule({
   declarations: [
-    MedidataComponent
+    MedidataInsertComponent,
+    MedidataViewComponent,
+    PatientComponent
+    // PatientComponent,
+    // HttpClientModule    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  exports: [
-    MedidataComponent
-  ]
+  // exports: [
+  //   MedidataInsertComponent,
+  //   MedidataViewComponent,
+  //   PatientComponent
+  // ]
 })
 export class PatientModule { }

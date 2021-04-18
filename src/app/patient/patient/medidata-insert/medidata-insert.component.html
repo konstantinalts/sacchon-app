@@ -1,0 +1,26 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="onClickSubmit()">
+        <div class="form-group">
+            <label for="nameInput">Date</label>
+            <input type="date" class="form-control" id="dateInput" formControlName="date">
+        </div>
+
+        <div class="form-group">
+            <label for="timeInput">Time</label>
+            <input type="text" class="form-control" id="timeInput" formControlName="time">
+        </div>
+
+        <div class="form-group">
+            <label for="glucoseLevelInput">Glucose Level</label>
+            <input type="text" class="form-control" id="glucoseLevelInput" formControlName="glucoseLevel">
+        </div>
+
+        <div class="form-group">
+            <label for="carbIntakeInput">Carb Intake</label>
+            <input type="text" class="form-control" id="carbIntakeInput" formControlName="carbIntake">
+        </div>
+
+        <button class="btn btn-primary">Add Record</button>
+
+    </form>
+</div>
