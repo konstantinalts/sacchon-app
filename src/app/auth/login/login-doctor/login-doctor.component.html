@@ -1,16 +1,40 @@
 <div class="row">
-  <div class="col-mid-6 offset-md-3 mt-4">
+  <div class="col-mid-6 offset-md-5 mt-5">
     <h3>Login</h3>
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
       <div class="form-group">
         <label for="loginUsername" class="form-label">Username</label>
-        <input type="text" name="username" ngModel required #username="ngModel" class="form-control" id="loginUsername"
-          placeholder="Enter username">
+        <input type="text" name="username" ngModel required minlength="5" maxlength="15" #username="ngModel"
+          class="form-control" id="loginUsername" placeholder="Enter username">
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+          <div *ngIf="username.errors.required">
+            Username is required.
+          </div>
+          <div *ngIf="username.errors.minlength">
+            Username must be at least 5 characters long.
+          </div>
+          <div *ngIf="username.errors.maxlength">
+            Username cannot be more than 15 characters long.
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <label for="loginPassword" class="form-label">Password</label>
-        <input type="password" name="password" ngModel required #password="ngModel" class="form-control"
-          id="loginPassword" placeholder="Enter password">
+        <input type="password" name="password" ngModel required minlength="8" maxlength="20"
+          ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/" #password="ngModel"
+          class="form-control" id="loginPassword" placeholder="Enter password">
+        <div *ngIf="password.errors.required">
+          Password is required.
+        </div>
+        <div *ngIf="password.errors.minlength">
+          Password must be at least 8 characters long. 
+        </div>
+        <div *ngIf="password.errors.maxlength">
+          Password cannot be more than 20 characters long.
+        </div>
+        <div *ngIf="password.errors.ng-pattern">
+          Wrong password pattern.
+        </div>
       </div>
       <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Login</button>
     </form>
