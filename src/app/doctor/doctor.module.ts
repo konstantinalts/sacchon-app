@@ -18,6 +18,13 @@ import { MyPatientsDataComponent } from './doctor/my-patients/my-patients-data/m
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    DoctorComponent,
+    MyPatientsComponent,
+    AvailablePatientsComponent,
+    AppRoutingModule,
+    MyPatientsDataComponent
   ]
 })
 export class DoctorModule { }

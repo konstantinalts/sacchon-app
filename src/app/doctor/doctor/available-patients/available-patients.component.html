@@ -1,1 +1,14 @@
-<p>available-patients works!</p>
+<button class="btn btn-primary"(click)="getAvailablePatients()">SEE THE AVAILABLE PATIENTS</button>
+<div class="row">
+    <div *ngFor="let availablePatient of availablePatients">
+ 
+        <div class="col-sm-4"></div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              
+              <p class="card-text">{{availablePatient.fname}}</p>
+
+            </div>
+          </div>
+    </div>
+</div>
