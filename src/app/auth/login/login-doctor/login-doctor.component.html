@@ -1,42 +1,64 @@
 <div class="row">
   <div class="col-mid-6 offset-md-5 mt-5">
     <h3>Login</h3>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <form>
       <div class="form-group">
-        <label for="loginUsername" class="form-label">Username</label>
-        <input type="text" name="username" ngModel required minlength="5" maxlength="15" #username="ngModel"
-          class="form-control" id="loginUsername" placeholder="Enter username">
-        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
-          <div *ngIf="username.errors.required">
-            Username is required.
-          </div>
-          <div *ngIf="username.errors.minlength">
-            Username must be at least 5 characters long.
-          </div>
-          <div *ngIf="username.errors.maxlength">
-            Username cannot be more than 15 characters long.
-          </div>
+        <label for="username" class="form-label">Username</label>
+        <input 
+          required
+          minlength="4"
+          maxlength="15"
+          ngModel
+          name="username"
+          #username="ngModel"
+          id="username"
+          type="text"
+          class="form-control">
+        <div
+        class="alert alert-danger"
+        *ngIf="username && username.valid && (username.dirty || username.touched)">
+        <div *ngIf="username.errors!.required">
+          Username is required
+        </div>
+        <div *ngIf="username.errors!.minlength">
+          Username should be minimum {{ username.errors!.minlength.requiredLength }} characters
+        </div>
+        <div *ngIf="username.errors!.maxlength">
+          Username should be maximum {{ username.errors!.maxlength.requiredLength }} characters
+        </div>
         </div>
       </div>
       <div class="form-group">
         <label for="loginPassword" class="form-label">Password</label>
-        <input type="password" name="password" ngModel required minlength="8" maxlength="20"
-          ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/" #password="ngModel"
-          class="form-control" id="loginPassword" placeholder="Enter password">
-        <div *ngIf="password.errors.required">
-          Password is required.
+        <input
+          required
+          minlength="8"
+          maxlength="20"
+          ngModel
+          name="password"
+          #password="ngModel"
+          id="password"
+          type="password"
+          class="form-control"  
+          pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/">
+      <div
+        class="alert alert-danger"
+        *ngIf="password.touched && !password.valid">
+        <div *ngIf="password.errors!.required">
+          Password is required
         </div>
-        <div *ngIf="password.errors.minlength">
-          Password must be at least 8 characters long. 
+        <div *ngIf="password.errors!.minlength">
+          Password should be minimum {{ password.errors!.minlength.requiredLength}} characters
         </div>
-        <div *ngIf="password.errors.maxlength">
-          Password cannot be more than 20 characters long.
+        <div *ngIf="password.errors!.maxlength">
+          Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
         </div>
-        <div *ngIf="password.errors.ng-pattern">
-          Wrong password pattern.
+        <div *ngIf="password.errors!.pattern">
+          Password doesn't match the pattern 
         </div>
       </div>
-      <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Login</button>
+      </div>
+      <button type="submit"class="btn btn-primary">Login</button>
     </form>
   </div>
 </div>

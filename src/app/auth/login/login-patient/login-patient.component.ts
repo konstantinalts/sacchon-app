@@ -1,4 +1,4 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class LoginPatientComponent implements OnInit {
 
-  loginForm: FormGroup;
+  loginForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder){}
 

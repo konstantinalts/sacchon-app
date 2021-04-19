@@ -18,7 +18,7 @@ import { RegisterPatientComponent } from './register/register-patient/register-p
     LoginPatientComponent,
     LoginDoctorComponent,
     RegisterDoctorComponent,
-    RegisterPatientComponent,
+    RegisterPatientComponent
   ],
   imports: [
     CommonModule,

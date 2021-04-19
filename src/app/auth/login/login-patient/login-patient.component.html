@@ -17,14 +17,14 @@
         <div
         class="alert alert-danger"
         *ngIf="username && username.valid && (username.dirty || username.touched)">
-        <div *ngIf="username.errors.required">
+        <div *ngIf="username.errors!.required">
           Username is required
         </div>
-        <div *ngIf="username.errors.minlength">
-          Username should be minimum {{ username.errors.minlength.requiredLength }} characters
+        <div *ngIf="username.errors!.minlength">
+          Username should be minimum {{ username.errors!.minlength.requiredLength }} characters
         </div>
-        <div *ngIf="username.errors.maxlength">
-          Username should be maximum {{ username.errors.maxlength.requiredLength }} characters
+        <div *ngIf="username.errors!.maxlength">
+          Username should be maximum {{ username.errors!.maxlength.requiredLength }} characters
         </div>
         </div>
       </div>
@@ -44,16 +44,16 @@
       <div
         class="alert alert-danger"
         *ngIf="password.touched && !password.valid">
-        <div *ngIf="password.errors.required">
+        <div *ngIf="password.errors!.required">
           Password is required
         </div>
-        <div *ngIf="password.errors.minlength">
-          Password should be minimum {{ password.errors.minlength.requiredLength}} characters
+        <div *ngIf="password.errors!.minlength">
+          Password should be minimum {{ password.errors!.minlength.requiredLength}} characters
         </div>
-        <div *ngIf="password.errors.maxlength">
-          Password should be maximum {{ password.errors.maxlength.requiredLength }} characters
+        <div *ngIf="password.errors!.maxlength">
+          Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
         </div>
-        <div *ngIf="password.errors.pattern">
+        <div *ngIf="password.errors!.pattern">
           Password doesn't match the pattern 
         </div>
       </div>
