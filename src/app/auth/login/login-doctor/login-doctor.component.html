@@ -16,7 +16,7 @@
           class="form-control">
         <div
         class="alert alert-danger"
-        *ngIf="username && username.valid && (username.dirty || username.touched)">
+        *ngIf="username.dirty || username.touched">
         <div *ngIf="username.errors!.required">
           Username is required
         </div>
@@ -39,8 +39,7 @@
           #password="ngModel"
           id="password"
           type="password"
-          class="form-control"  
-          pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/">
+          class="form-control">
       <div
         class="alert alert-danger"
         *ngIf="password.touched && !password.valid">
@@ -52,9 +51,6 @@
         </div>
         <div *ngIf="password.errors!.maxlength">
           Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
-        </div>
-        <div *ngIf="password.errors!.pattern">
-          Password doesn't match the pattern 
         </div>
       </div>
       </div>
