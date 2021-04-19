@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { PatientModule } from './patient/patient.module';
 import { AuthModule } from './auth/auth.module';
 import { NgModule } from '@angular/core';
@@ -20,7 +21,8 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
     HomeModule,
     AuthRoutingModule,
     AuthModule,
-    PatientModule
+    PatientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
