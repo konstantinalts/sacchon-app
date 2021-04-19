@@ -21,8 +21,8 @@
                 </li>
 
                 <!-- dokimastiko -->
-
-                <!-- <li class="nav-item">
+                <ul>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" 
                     [routerLink]="['userdata']" routerLinkActive="active">Profile</a>
                 </li>
@@ -33,28 +33,27 @@
                 </li>
 
             </ul>
-        </div>
+        <!-- </div>
     </div>
 </nav> -->
 
 
 <div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#66c2ff">
-       <a href=""> <img src="https://raw.githubusercontent.com/MariosGeni/sacchon-app/master/src/icons/Untitled-1.png" class="navbar-brand" alt="logo"> </a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#b3e0ff">
+       <a href=""> <img src="https://raw.githubusercontent.com/MariosGeni/sacchon-app/master/src/icons/Untitled-1%20(1).png" class="navbar-brand" alt="logo"> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
-
-        <form class="form-inline" id="guestForm"  name="guestForm" action="/login">
-            <button type="submit" style="margin-right: auto" class="mt-2 btn btn-lg btn-dark">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/login']"
+            routerLinkActive="active"> 
+            <button type="submit" style="margin-right" class="mt-2 btn btn-lg btn-primary">
                 Sign-In
-            </button>
-            <button type="submit" style="margin-right: auto" class="mt-2 btn btn-lg btn-dark">
+            </button></a>
+            <button type="submit" style="margin-right" class="mt-2 btn btn-lg btn-secondary" [routerLink]="['/register']" routerLinkActive="active">
                 Register
             </button>
-        </form>
         </div>
     </nav>
 </div>
@@ -95,8 +94,8 @@
 </div>
 
 
-<footer class="bg-dark text-center text-white">
-    <div class="text-center p-3" style="background-color: #66c2ff">
+<footer class="bg-dark text-center text-white footer">
+    <div class="text-center p-3" style="background-color: #b3e0ff">
       © 2020 Copyright:
       <a class="text-white">Sacchon</a>
     </div>
