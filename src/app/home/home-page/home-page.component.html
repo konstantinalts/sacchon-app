@@ -31,11 +31,11 @@
                                 Register as a doctor
                             </button>
                             <!-- <button class="btn btn-outline-danger my-2 my-sm-0" (click)='logOut()'></button> -->
-                        <!-- </div> -->
+                        <!-- </div>
                         
                     
-                    <!-- </div> -->
-             <!-- </div>        --> 
+                    </div>
+             </div>        --> 
 
         </div>
 
@@ -73,18 +73,19 @@
 
         <div>
             <div class="row">
-
-                <div class="col-xs-6" style="margin-bottom: 15%;">
-                    <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn btn-link"
-                        [routerLink]="['/login/doctor_login']" routerLinkActive="active">
-                        Sign-In as a doctor
-                    </button>
-                    <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn btn-link"
-                        [routerLink]="['/register/doctor_register']" routerLinkActive="active">
-                        Register as a doctor
-                    </button>
-
-                </div>
+                
+                <!-- <form class="form-inline" *ngIf="!isLoggedDoc"> -->
+                    <div class="col-xs-6" style="margin-bottom: 15%;">
+                        <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn btn-link"
+                            [routerLink]="['/login/doctor_login']" routerLinkActive="active">
+                            Sign-In as a doctor
+                        </button>
+                        <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn btn-link"
+                            [routerLink]="['/register/doctor_register']" routerLinkActive="active">
+                            Register as a doctor
+                        </button>
+                    </div>
+                <!-- </form>                 -->
 
 
             </div>
@@ -92,7 +93,7 @@
     </section>
 </div>
 
-</div>
+<!-- </div> -->
 
 
 
