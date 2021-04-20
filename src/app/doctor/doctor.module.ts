@@ -5,7 +5,7 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { AvailablePatientsComponent } from './doctor/available-patients/available-patients.component';
 import { MyPatientsComponent } from './doctor/my-patients/my-patients.component';
 import { MyPatientsDataComponent } from './doctor/my-patients/my-patients-data/my-patients-data.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { MyPatientsDataComponent } from './doctor/my-patients/my-patients-data/m
     MyPatientsDataComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ChartsModule
   ],
   exports: [
     DoctorComponent,

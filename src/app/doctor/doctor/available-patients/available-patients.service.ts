@@ -12,7 +12,7 @@ export class AvailablePatientsService {
 
   private readonly baseUrl= 'http://localhost:9000/sacchon'
 
-  getMyPatients():Observable<AvailablePatients[]>{
+  getAvailablePatients():Observable<AvailablePatients[]>{
     return this.http.get<AvailablePatients[]>(
       `${this.baseUrl}/patient`
     )

@@ -3,6 +3,16 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
+    color: rgb(14, 12, 12);
     text-align: center;
   }
+
+  .card {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: rgb(177, 241, 250);
+    background-color: #f0f5f5 ;
+    transition: 0.66s;
+  }
+
+

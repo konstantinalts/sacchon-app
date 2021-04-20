@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PatientComponent } from './patient/patient/patient.component';
 import { MedidataInsertComponent } from './patient/patient/medidata-insert/medidata-insert.component';
 import { MyPatientsComponent } from './doctor/doctor/my-patients/my-patients.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
   { path: 'userdata/medidata-view', component: MedidataViewComponent },
@@ -15,7 +17,12 @@ const routes: Routes = [
   { path: 'doctor', component: DoctorComponent},
   { path: 'doctor/my-patients', component: MyPatientsComponent},
   { path: 'doctor/available-patients', component: AvailablePatientsComponent},
-  { path: 'doctor/my-patients/my-patients-data', component: MyPatientsDataComponent}
+  { path: 'doctor/my-patients/my-patients-data', component: MyPatientsDataComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent }
+
+
+
   // { path: 'userdata/consultations-view', component: ConsultationsComponent }
 ];
 

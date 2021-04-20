@@ -17,9 +17,11 @@ export class AvailablePatientsComponent implements OnInit {
   }
   getAvailablePatients(){
     this.availablePatients = [];
-    this.availablePatientsService.getMyPatients().subscribe(data =>{
+    this.availablePatientsService.getAvailablePatients().subscribe(data =>{
       this.availablePatients = data ;
       console.log(this.availablePatients);
     });
   }
+
+  
 }
