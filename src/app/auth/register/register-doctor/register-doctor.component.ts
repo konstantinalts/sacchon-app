@@ -1,5 +1,7 @@
+import { DoctorRegisterService } from './doctor-register.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { DoctorRegister } from './doctor-register';
 
 @Component({
   selector: 'app-register-doctor',
@@ -8,31 +10,26 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 })
 export class RegisterDoctorComponent implements OnInit {
 
-registerForm!: FormGroup;
+  register!: FormGroup;
+  constructor(private fb: FormBuilder, private doctorRegisterService: DoctorRegisterService) { }
 
-  constructor(private formBuilder: FormBuilder){}
-
-  ngOnInit(){ 
-    this.registerForm = this.formBuilder.group({
-      fname: ['', [Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(15)]],
-      lname: ['', [Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(15)]],
-      birthdate:['',Validators.required],
-      telephone:['',[Validators.required,
-        Validators.minLength(10), 
-        Validators.maxLength(10)]],
-      email:['',[Validators.required,
-        Validators.email]],
-      username: ['', [Validators.required,
-           Validators.minLength(4), 
-           Validators.maxLength(15)]],
-      password: ['', [Validators.required,
-          Validators.minLength(4), 
-          Validators.maxLength(15)]]
+  ngOnInit(): void {
+    this.register = this.fb.group({
+      fname: [""],
+      lname: [""],
+      birthdate: [""],
+      telephone: [""],
+      email: [""],
+      usename: [""],
+      password: [""]
     })
-   }
+  }
+
+  onClickSubmit() {
+    let doctor: DoctorRegister = this.register.value;
+    this.doctorRegisterService.addDoctor(doctor).subscribe(data => {
+      console.log(data)
+    })
+  }
 
 }

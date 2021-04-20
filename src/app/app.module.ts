@@ -1,3 +1,4 @@
+import { PatientService } from './patient/patient/patient.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PatientModule } from './patient/patient.module';
 import { AuthModule } from './auth/auth.module';
@@ -9,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { HomeModule } from './home/home.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
+
 
 @NgModule({
   declarations: [
