@@ -8,14 +8,31 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 })
 export class RegisterPatientComponent implements OnInit {
 
-  ngOnInit():void {  }
+  registerForm!: FormGroup;
 
+  constructor(private formBuilder: FormBuilder){}
 
-
-
-  onSubmit(f: NgForm) {
-    console.log(f.value);
-    console.log(f.valid);
-  }
+  ngOnInit(){ 
+    this.registerForm = this.formBuilder.group({
+      fname: ['', [Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(15)]],
+      lname: ['', [Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(15)]],
+      birthdate:['',Validators.required],
+      telephone:['',[Validators.required,
+        Validators.minLength(10), 
+        Validators.maxLength(10)]],
+      email:['',[Validators.required,
+        Validators.email]],
+      username: ['', [Validators.required,
+           Validators.minLength(4), 
+           Validators.maxLength(15)]],
+      password: ['', [Validators.required,
+          Validators.minLength(4), 
+          Validators.maxLength(15)]]
+    })
+   }
 
 }
