@@ -18,6 +18,16 @@
             <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
                 Register
             </button>
+            <form class="form-inline" *ngIf="isLogged">
+                <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logOut()">
+                    Logout
+                </button>
+            </form>
+            <form class="form-inline" *ngIf="isLoggedDoc">
+                <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logOutDoc()">
+                    Logout
+                </button>
+            </form>
             </a>
         </div>
     </nav>

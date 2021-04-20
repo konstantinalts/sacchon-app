@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-mid-6 offset-md-5 mt-5">
     <h3>Login</h3>
-    <form>
+    <form [formGroup]="loginFormPatient" (ngSubmit)="logInPatient()">
       <div class="form-group">
         <label for="username" class="form-label">Username</label>
         <input 
