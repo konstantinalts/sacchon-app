@@ -12,19 +12,28 @@
                 Home
             </button>
 
+
+            
+            
             <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
                 Sign-In
             </button>
             <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
                 Register
             </button>
+            
+        
+
+
+
+            
             <form class="form-inline" *ngIf="isLogged">
-                <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logOut()">
+                <button style="margin-right" class="mr-auto btn btn-sm btn-outline-danger" (click)="logOut()">
                     Logout
                 </button>
             </form>
             <form class="form-inline" *ngIf="isLoggedDoc">
-                <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logOutDoc()">
+                <button style="margin-right" class="mr-auto btn btn-sm btn-outline-danger" (click)="logOutDoc()">
                     Logout
                 </button>
             </form>
