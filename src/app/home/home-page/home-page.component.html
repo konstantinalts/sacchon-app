@@ -1,103 +1,37 @@
-<!-- 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Sacchon <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-record" viewBox="0 0 16 16">
-                <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
-            </svg></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" [routerLink]="['login']"
-                        routerLinkActive="active">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" 
-                    [routerLink]="['register']" routerLinkActive="active">Register</a>
-                </li>
-
-                dokimastiko
-                 <ul> 
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" 
-                    [routerLink]="['userdata']" routerLinkActive="active">Profile</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" 
-                    [routerLink]="['doctor']" routerLinkActive="active">Doctor</a>
-                </li>
-
-            </ul> -->
-        <!-- </div>
-    </div>
-</nav> -->
-
-<!-- 
-<div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#b3e0ff">
-       <a href=""> <img src="https://raw.githubusercontent.com/MariosGeni/sacchon-app/master/src/icons/Untitled-1%20(1).png" class="navbar-brand" alt="logo"> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-            <a class="nav-link active" aria-current="page" [routerLink]="['/login']"
-            routerLinkActive="active"> 
-            <button type="submit" style="margin-right" class="mt-2 btn btn-lg btn-primary">
-                Sign-In
-            </button></a>
-            <button type="submit" style="margin-right" class="mt-2 btn btn-lg btn-secondary" [routerLink]="['/register']" routerLinkActive="active">
-                Register
-            </button>
-        </div>
-    </nav>
-</div>
 <div class="container pt-4 mt-lg-4">
-    <div class="row">
+    <div class="row">    
 
-        <div class="col mr-3">
-            <div id="card" class="card" >
-                <img class="card-img-top" src="src\icons\blog-diabetes.png" alt="Card image cap" id="images">
-                <div class="card-body">
-                    <h4 id="h4" class="card-title">Why Us</h4>
-                    <p class="card-text text-center">We are a dedicated team launching this revolutionary iniatiative to improve your quality of life day to day. We believe that immediate availability of health records and trained healthcare professionals will offer you what you need in the easiest way than ever before-just with one click!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col mr-3">
+        <div class="col-md-5">            
             <div id="card" class="card">
-                <img class="card-img-top" src="/images/low_price.png" alt="Card image cap" id="images">
+                <!-- <img class="card-img-top" src="/images/tools.jpg" alt="Card image cap" id="images"> -->
                 <div class="card-body">
-                    <h4 id="h4" class="card-title">Low Cost</h4>
-                    <p class="card-text text-center">We promptly and responsibly cover any house repair. We use premium materials with low cost, we fix your home and we do not drain your wallet</p>
+                    <h4 id="h4" class="card-title">Why us</h4>
+                    <p class="card-text text-left">We are a dedicated team launching this revolutionary iniatiative to improve your quality of life day to day. We believe that immediate availability of health records and trained healthcare professionals will offer you what you need in the easiest way than ever before-just with one click!
                 </div>
-            </div>
+            </div>            
         </div>
 
-        <div class="col">
-            <div id="card" class="card">
-                <img class="card-img-top" src="/images/tools.jpg" alt="Card image cap" id="images">
-                <div class="card-body">
-                    <h4 id="h4" class="card-title">Range of Services</h4>
-                    <p class="card-text text-center">We provide a complete range of services, from changing a light bulb and giving advice to small or large renovations, in order to meet all your needs.</p>
-                </div>
-            </div>
+        <div>
+            <img class="img-right" src="https://user-images.githubusercontent.com/67487647/115299130-17ec5600-a167-11eb-9719-c8f3d0c066d1.png" id="images">
+            <h5> Are you a doctor? </h5>
+           
+                <div class="container">
+                    <div class="row">
+                    
+                        <div class="col-xs-6">
+                            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/doctor_login']" routerLinkActive="active">
+                                Sign-In as a doctor
+                            </button>
+                            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/doctor_register']" routerLinkActive="active">
+                                Register as a doctor
+                            </button>
+                        </div>
+                        
+                    
+                    </div>
         </div>
+
+        
 
     </div>
 </div>
-
-
-<footer class="bg-dark text-center text-white footer">
-    <div class="text-center p-3" style="background-color: #b3e0ff">
-      © 2021 Copyright:
-      <a class="text-white">Sacchon</a>
-    </div>
-  </footer> -->

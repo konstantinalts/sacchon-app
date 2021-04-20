@@ -8,23 +8,24 @@
             <ul class="navbar-nav mr-auto"></ul>
             <a class="nav-link active" aria-current="page"> 
             
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary">
+            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/home-page']" routerLinkActive="active">
                 Home
             </button>
 
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login']" routerLinkActive="active">
+            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
                 Sign-In
-            </button></a>
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register']" routerLinkActive="active">
+            </button>
+            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
                 Register
             </button>
+            </a>
         </div>
     </nav>
 </div>
-<div class="container pt-4 mt-lg-4">
-    <div class="row">
+<!-- <div class="container pt-4 mt-lg-4">
+    <div class="row"> 
 
-        <!-- <div class="col mr-3">
+        <div class="col mr-3">
             <div id="card" class="card" >
                 <img class="card-img-top" src="src\icons\blog-diabetes.png" alt="Card image cap" id="images">
                 <div class="card-body">
@@ -43,12 +44,12 @@
                     </p>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <div class="col-md-5">
+         <div class="col-md-5">
             
                 <div id="card" class="card">
-                    <!-- <img class="card-img-top" src="/images/tools.jpg" alt="Card image cap" id="images"> -->
+                    <img class="card-img-top" src="/images/tools.jpg" alt="Card image cap" id="images">
                     <div class="card-body">
                         <h4 id="h4" class="card-title">Why us</h4>
                         <p class="card-text text-left">We are a dedicated team launching this revolutionary iniatiative to improve your quality of life day to day. We believe that immediate availability of health records and trained healthcare professionals will offer you what you need in the easiest way than ever before-just with one click!
@@ -71,11 +72,8 @@
                             <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register']" routerLinkActive="active">
                                 Register as a doctor
                             </button>
-                            <!-- <button class="nav-link active btn btn-outline primary btn-block" routerLink='/doctor_login' routerLinkActive="active">Sign-in as doctor</button> -->
                         </div>
-                        <!-- <div class="col-xs-6">
-                            <button class="nav-link active btn btn-primary btn-block" routerLink='/doctor_register' routerLinkActive="active">Register as doctor</button>
-                        </div> -->
+                        
                     
                     </div>
         </div>
@@ -83,7 +81,7 @@
         
 
     </div>
-</div>
+</div> -->
 
 
 

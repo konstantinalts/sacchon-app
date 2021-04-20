@@ -1,3 +1,4 @@
+import { HomePageComponent } from './home/home-page/home-page.component';
 import { MyPatientsDataComponent } from './doctor/doctor/my-patients/my-patients-data/my-patients-data.component';
 import { AvailablePatientsComponent } from './doctor/doctor/available-patients/available-patients.component';
 import { DoctorComponent } from './doctor/doctor/doctor.component';
@@ -9,6 +10,10 @@ import { MedidataInsertComponent } from './patient/patient/medidata-insert/medid
 import { MyPatientsComponent } from './doctor/doctor/my-patients/my-patients.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { LoginPatientComponent } from './auth/login/login-patient/login-patient.component';
+import { LoginDoctorComponent } from './auth/login/login-doctor/login-doctor.component';
+import { RegisterPatientComponent } from './auth/register/register-patient/register-patient.component';
+import { RegisterDoctorComponent } from './auth/register/register-doctor/register-doctor.component';
 
 const routes: Routes = [
   { path: 'userdata/medidata-view', component: MedidataViewComponent },
@@ -18,6 +23,14 @@ const routes: Routes = [
   { path: 'doctor/my-patients', component: MyPatientsComponent},
   { path: 'doctor/available-patients', component: AvailablePatientsComponent},
   { path: 'doctor/my-patients/my-patients-data', component: MyPatientsDataComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'home-page', component: HomePageComponent},
+  { path: '',redirectTo: '/home-page', pathMatch:'full'},
+  { path: 'login/patient_login', component: LoginPatientComponent },
+  { path: 'login/doctor_login', component: LoginDoctorComponent },
+  { path: 'register/patient_register', component: RegisterPatientComponent },
+  { path: 'register/doctor_register', component: RegisterDoctorComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent }
 
