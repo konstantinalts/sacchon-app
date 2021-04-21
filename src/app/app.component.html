@@ -9,40 +9,27 @@
             <a class="nav-link active" aria-current="page"> 
             
             <ul class="navbar-nav mr-auto">
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/home-page']" routerLinkActive="active">
-                Home
-            </button>
-            
            
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
+           
+            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active" *ngIf="!(isLogged || isLoggedDoc)">
                 Sign-In
             </button>
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
+            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active" *ngIf="!(isLogged || isLoggedDoc)">
                 Register
-            </button>
-        
+            </button>       
                             
 
-
-            <form class="form-inline" *ngIf="isLogged">
+            <form class="form-inline" *ngIf="isLogged || isLoggedDoc">
                 <button style="margin-right" class="mr-auto btn btn-sm btn-outline-danger" (click)="logOut()">
                     Logout
                 </button>
             </form>
-            <form class="form-inline" *ngIf="isLoggedDoc">
-                <button style="margin-right" class="mr-auto btn btn-sm btn-outline-danger" (click)="logOutDoc()">
-                    Logout
-                </button>
-            </form>
-            </ul>
-            
-            
-                    
+        </ul>           
+                      
             </a>
         </div>
     </nav>
 </div>
-
 
 
 <router-outlet></router-outlet>
