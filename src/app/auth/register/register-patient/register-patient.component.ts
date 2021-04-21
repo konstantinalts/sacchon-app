@@ -15,7 +15,7 @@ register!: FormGroup;
 
 ngOnInit(): void{
   this.register = this.fb.group({
-<<<<<<< HEAD
+
     fname: ["", [Validators.required,Validators.minLength(3),Validators.maxLength(20)]],
     lname: ["", [Validators.required,Validators.minLength(5),Validators.maxLength(20)]],
     birthdate: ["", Validators.required],
@@ -24,15 +24,7 @@ ngOnInit(): void{
     email: ["", [Validators.required,Validators.email]],
     username: ["",[Validators.required,Validators.minLength(5),Validators.maxLength(20)]],
     password: ["",[Validators.required,Validators.minLength(8),Validators.maxLength(20)]]
-=======
-    fname: ["",],
-    lname: ["",],
-    birthdate: ["",],
-    telephone: ["",],
-    email: ["",],
-    usename: ["",],
-    password: ["",]
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
+
   })
 }
 

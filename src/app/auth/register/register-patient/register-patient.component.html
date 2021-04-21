@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col-mid-7 offset-md-5">
     <h3>Register</h3>
-<<<<<<< HEAD
-
     <form [formGroup]="register" (ngSubmit)="onClickSubmit()">
       <div class="form-group">
         <label for="registerFName" class="form-label">First name</label>
@@ -19,40 +17,10 @@
           <div *ngIf="register.get('fname')?.errors!.maxlength">
             First name should be maximum {{ register.get('fname')?.errors!.maxlength.requiredLength }} characters
           </div>
-=======
-    
-    <form  (ngSubmit)="onClickSubmit()">
-      <div class="form-group">
-        <label for="registerFName" class="form-label">First name</label>
-        <input 
-        type="text"
-        class="form-control" 
-        name="fname" 
-        ngModel 
-        required 
-        minlength="3"
-        maxlength="15"
-        #fname="ngModel" 
-        id="registerFName"
-        placeholder="Enter your firstname">
-        <div
-        class="alert alert-danger"
-        *ngIf="(fname.dirty || fname.touched) && !fname.valid">
-        <div *ngIf="fname.errors!.required">
-          First name is required
-        </div>
-        <div *ngIf="fname.errors!.minlength">
-          First name should be minimum {{ fname.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="fname.errors!.maxlength">
-          First name should be maximum {{ fname.errors!.maxlength.requiredLength }} characters
-        </div>
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
         </div>
       </div>
       <div class="form-group">
         <label for="registerLName" class="form-label">Last name</label>
-<<<<<<< HEAD
         <input type="text" class="form-control" name="lname" formControlName="lname" id="registerLName"
           placeholder="Enter your firstname">
         <div class="alert alert-danger"
@@ -66,36 +34,11 @@
           <div *ngIf="register.get('lname')?.errors!.maxlength">
             Last name should be maximum {{ register.get('lname')?.errors!.maxlength.requiredLength }} characters
           </div>
-=======
-        <input 
-        type="text" 
-        class="form-control" 
-        name="lname" 
-        ngModel 
-        required 
-        minlength="3"
-        maxlength="15"
-        #lname="ngModel" 
-        id="registerLName"
-        placeholder="Enter your firstname">
-        <div
-        class="alert alert-danger"
-        *ngIf="(lname.dirty || lname.touched) && !lname.valid">
-        <div *ngIf="lname.errors!.required">
-          Last name is required
-        </div>
-        <div *ngIf="lname.errors!.minlength">
-          Last name should be minimum {{ lname.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="lname.errors!.maxlength">
-          Last name should be maximum {{ lname.errors!.maxlength.requiredLength }} characters
-        </div>
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
+
         </div>
       </div>
       <div class="form-group">
         <label for="registerBday" class="form-label">Birthdate</label>
-<<<<<<< HEAD
         <input type="date" class="form-control" name="birthdate" formControlName="birthdate" id="registerBday"
           placeholder="Enter your birthdate">
         <div class="alert alert-danger"
@@ -103,22 +46,6 @@
           <div *ngIf="register.get('birthdate')?.errors!.required">
             Birthdate is required
           </div>
-=======
-        <input 
-        type="date" 
-        class="form-control" 
-        name="birthdate" 
-        ngModel 
-        required 
-        #birthdate="ngModel" 
-        id="registerBday"
-        placeholder="Enter your birthdate">
-        <div
-        class="alert alert-danger"
-        *ngIf="(birthdate.dirty || birthdate.touched) && !birthdate.valid">
-        <div *ngIf="birthdate.errors!.required">
-          Birthdate is required
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
         </div>
       </div>
       <div class="form-group">
@@ -140,7 +67,6 @@
       </div>
       <div class="form-group">
         <label for="registerTelephone" class="form-label">Telephone</label>
-<<<<<<< HEAD
         <input type="text" class="form-control" name="telephone" formControlName="telephone" id="registerTelephone"
           placeholder="Enter your telephone">
         <div class="alert alert-danger"
@@ -154,36 +80,10 @@
           <div *ngIf="register.get('telephone')?.errors!.maxlength">
             Telephone should be maximum {{ register.get('telephone')?.errors!.maxlength.requiredLength }} characters
           </div>
-=======
-        <input 
-        type="text" 
-        class="form-control" 
-        name="telephone" 
-        ngModel 
-        required
-        minlength="10"
-        maxlength="10" 
-        #telephone="ngModel"
-        id="registerTelephone" 
-        placeholder="Enter your telephone">
-        <div
-        class="alert alert-danger"
-        *ngIf="(telephone.dirty || telephone.touched) && !telephone.valid">
-        <div *ngIf="telephone.errors!.required">
-          Telephone is required
-        </div>
-        <div *ngIf="telephone.errors!.minlength">
-          Telephone should be minimum {{ telephone.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="telephone.errors!.maxlength">
-          Telephone should be maximum {{ telephone.errors!.maxlength.requiredLength }} characters
-        </div>
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
         </div>
       </div>
       <div class="form-group">
         <label for="registerEmail" class="form-label">Email</label>
-<<<<<<< HEAD
         <input type="email" class="form-control" name="email" formControlName="email" id="registerEmail"
           placeholder="Enter your email">
         <div class="alert alert-danger"
@@ -208,59 +108,10 @@
           <div *ngIf="register.get('email')?.errors!.email">
             example@example.com
           </div>
-=======
-        <input 
-        type="email" 
-        class="form-control" 
-        name="email" 
-        ngModel 
-        required 
-        email
-        #email="ngModel" 
-        id="registerEmail"
-        placeholder="Enter your email">
-        <div
-        class="alert alert-danger"
-        *ngIf="(email.dirty || email.touched) && !email.valid">
-        <div *ngIf="email.errors!.required">
-          Email is required
-        </div>
-        <div *ngIf="email.errors!.email">
-          example@example.com
-        </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="registerUsername" class="form-label">Username</label>
-        <input 
-        type="text" 
-        class="form-control" 
-        name="username" 
-        ngModel 
-        required 
-        minlength="5"
-        maxlength="15"
-        #username="ngModel"
-        id="registerUsername" 
-        placeholder="Enter your username">
-        <div
-        class="alert alert-danger"
-        *ngIf="(username.dirty || username.touched) && !username.valid">
-        <div *ngIf="username.errors!.required">
-          Username is required
-        </div>
-        <div *ngIf="username.errors!.minlength">
-          Usernameshould be minimum {{ username.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="username.errors!.maxlength">
-          Username should be maximum {{ username.errors!.maxlength.requiredLength }} characters
-        </div>
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
         </div>
       </div>
       <div class="form-group">
         <label for="registerPassword" class="form-label">Password</label>
-<<<<<<< HEAD
         <input type="password" class="form-control" name="password" formControlName="password" id="registerPassword"
           placeholder="Enter your password">
         <div class="alert alert-danger"
@@ -274,30 +125,6 @@
           <div *ngIf="register.get('password')?.errors!.maxlength">
             Password should be maximum {{ register.get('password')?.errors!.maxlength.requiredLength }} characters
           </div>
-=======
-        <input 
-        type="password" 
-        class="form-control" 
-        name="password" 
-        ngModel 
-        required 
-        minlength="8"
-        maxlength="20"
-        #password="ngModel"
-        id="registerPassword" placeholder="Enter your password">
-        <div
-        class="alert alert-danger"
-        *ngIf="(password.dirty || password.touched) && !password.valid">
-        <div *ngIf="password.errors!.required">
-          Password is required
-        </div>
-        <div *ngIf="password.errors!.minlength">
-          Password should be minimum {{ password.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="password.errors!.maxlength">
-          Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
-        </div>
->>>>>>> b18a8d8cc79c32b70690cb567e8e30e4bc2b8798
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Register</button>
