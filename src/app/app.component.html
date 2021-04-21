@@ -15,7 +15,7 @@
 
 
             
-                <form class="form-inline" *ngIf="!isLogged">
+                <form class="form-inline" *ngIf="!(isLogged || isLoggedDoc)">
                 <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
                     Sign-In
                 </button>
