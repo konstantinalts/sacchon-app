@@ -2,7 +2,7 @@
   <div class="col-mid-7 offset-md-5">
     <h3>Register</h3>
     
-    <form (ngSubmit)="onClickSubmit()">
+    <form  (ngSubmit)="onClickSubmit()">
       <div class="form-group">
         <label for="registerFName" class="form-label">First name</label>
         <input 
@@ -18,7 +18,7 @@
         placeholder="Enter your firstname">
         <div
         class="alert alert-danger"
-        *ngIf="fname.dirty || fname.touched">
+        *ngIf="(fname.dirty || fname.touched) && !fname.valid">
         <div *ngIf="fname.errors!.required">
           First name is required
         </div>
@@ -45,7 +45,7 @@
         placeholder="Enter your firstname">
         <div
         class="alert alert-danger"
-        *ngIf="lname.dirty || lname.touched">
+        *ngIf="(lname.dirty || lname.touched) && !lname.valid">
         <div *ngIf="lname.errors!.required">
           Last name is required
         </div>
@@ -70,7 +70,7 @@
         placeholder="Enter your birthdate">
         <div
         class="alert alert-danger"
-        *ngIf="birthdate.dirty || birthdate.touched">
+        *ngIf="(birthdate.dirty || birthdate.touched) && !birthdate.valid">
         <div *ngIf="birthdate.errors!.required">
           Birthdate is required
         </div>
@@ -91,7 +91,7 @@
         placeholder="Enter your telephone">
         <div
         class="alert alert-danger"
-        *ngIf="telephone.dirty || telephone.touched">
+        *ngIf="(telephone.dirty || telephone.touched) && !telephone.valid">
         <div *ngIf="telephone.errors!.required">
           Telephone is required
         </div>
@@ -117,7 +117,7 @@
         placeholder="Enter your email">
         <div
         class="alert alert-danger"
-        *ngIf="email.dirty || email.touched">
+        *ngIf="(email.dirty || email.touched) && !email.valid">
         <div *ngIf="email.errors!.required">
           Email is required
         </div>
@@ -141,7 +141,7 @@
         placeholder="Enter your username">
         <div
         class="alert alert-danger"
-        *ngIf="username.dirty || username.touched">
+        *ngIf="(username.dirty || username.touched) && !username.valid">
         <div *ngIf="username.errors!.required">
           Username is required
         </div>
@@ -167,7 +167,7 @@
         id="registerPassword" placeholder="Enter your password">
         <div
         class="alert alert-danger"
-        *ngIf="password.dirty || password.touched">
+        *ngIf="(password.dirty || password.touched) && !password.valid">
         <div *ngIf="password.errors!.required">
           Password is required
         </div>
@@ -184,7 +184,3 @@
   
   </div>
 </div>
-
-<hr>
-
-<hr>

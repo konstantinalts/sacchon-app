@@ -16,13 +16,13 @@ register!: FormGroup;
 
 ngOnInit(): void{
   this.register = this.fb.group({
-    fname: [""],
-    lname: [""],
-    birthdate: [""],
-    telephone: [""],
-    email: [""],
-    usename: [""],
-    password: [""]
+    fname: ["",],
+    lname: ["",],
+    birthdate: ["",],
+    telephone: ["",],
+    email: ["",],
+    usename: ["",],
+    password: ["",]
   })
 }
 
