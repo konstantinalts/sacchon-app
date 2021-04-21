@@ -6,46 +6,51 @@
 
 <div class="row" style="text-align: center;">
     <section>
-        <h6 style="margin-bottom: 2%;">
+        <h6 style="margin-bottom: 5%;">
             Your wellness, our mission!
-        </h6>
-        <img class="card-img-top" src="https://user-images.githubusercontent.com/67487647/115463590-a975c980-a234-11eb-8796-4c3544fefe07.jpg" alt="Card image cap" id="images" style="margin-bottom: 12%;" width="400" height="350">
-        <h5> Are you a doctor? </h5>
 
-        <div>
-            <div class="row">
-                
-               
-                    <div class="col-xs-6" style="margin-bottom: 60%;">
-                        <button type="submit" style="margin-center" class="mt-2 btn btn-sm btn btn-link"
+            <img class="card-img-top" src="https://user-images.githubusercontent.com/67487647/115463590-a975c980-a234-11eb-8796-4c3544fefe07.jpg" alt="Card image cap" id="images" style="margin-bottom: 12%;" width="400" height="450">
+
+
+
+            <div class=row>
+      
+                <div class="col-md-4">             
+                 <div id="card" class="card" style="margin-bottom: 30%;">
+                   <img class="card-img" src="https://user-images.githubusercontent.com/67487647/115541159-7a4c7000-a2a7-11eb-8710-58392b3107b0.jpg" alt="Card image cap" id="images" width="450" height="400">
+                   <div class="card-body">
+                     <a class="btn btn-outline-secondary btn-lg btn-block" [routerLink]="['medidata-view']" routerLinkActive="active">Are you a doctor?</a>
+                     <button type="submit" style="margin-center" class="mt-2 btn btn-sm btn btn-link"
                             [routerLink]="['/login/doctor_login']" routerLinkActive="active">
                             Sign-In as a doctor
                         </button>
-                        <button type="submit" style="margin-center" class="mt-2 btn btn-sm btn btn-link"
-                            [routerLink]="['/register/doctor_register']" routerLinkActive="active">
-                            Register as a doctor
-                        </button>
+                    <button type="submit" style="margin-center" class="mt-2 btn btn-sm btn btn-link"
+                        [routerLink]="['/register/doctor_register']" routerLinkActive="active">
+                        Register as a doctor
+                    </button>
+                   </div>
+                 </div>
+               </div>
+                            
+               <div class="col-md-4">             
+                 <div id="card" class="card" style="margin-bottom: 30%;">
+                   <img class="card-img" src="https://user-images.githubusercontent.com/67487647/115545971-26448a00-a2ad-11eb-8569-337c10780e26.jpg" alt="Card image cap" id="images" width="450" height="400">
+                     <div class="card-body">
+                        <p class="card-text text-left">We are a dedicated team launching this revolutionary iniatiative to
+                            improve your quality of life day to day. We believe that immediate availability of health
+                            records and trained healthcare professionals will offer you what you need in the easiest way
+                            than ever before-just with one click!
                     </div>
-            
+                 </div>
+              </div>
+             
+             </div>      
+        </h6>
+        
+    
 
-                    <div class=row>
-                        <!-- <div class="col-md-5">             -->
-                        <div id="card" class="card" style="margin-bottom: 30%;">
-                            <!-- <img class="card-img-top" src="/images/tools.jpg" alt="Card image cap" id="images"> -->
-                            <div class="card-body">
-                                <h4 id="h4" class="card-title">Why us</h4>
-                                <p class="card-text text-left">We are a dedicated team launching this revolutionary iniatiative to
-                                    improve your quality of life day to day. We believe that immediate availability of health
-                                    records and trained healthcare professionals will offer you what you need in the easiest way
-                                    than ever before-just with one click!
-                            </div>
-                        </div>
-                        <!-- </div>  -->
-                    </div>
-                    
-                    
-                
-            </div>
+        <div>
+           
         </div>
     </section>
 </div>
