@@ -14,7 +14,7 @@ export class DoctorRegisterService {
 
   addDoctor(doctor: DoctorRegister): Observable<DoctorRegister>{
     return this.http.post<DoctorRegister>(
-      `${this.baseUrl}/register/user`,
+      `${this.baseUrl}/register/doctor`,
       doctor
     )
   }

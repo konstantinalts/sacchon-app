@@ -1,7 +1,7 @@
-import { PatientService } from './../patient.service';
+import { MedidataService } from './medidata.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Patient } from '../patient';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Medidata } from './medidata';
 
 @Component({
   selector: 'app-medidata-insert',
@@ -12,20 +12,20 @@ export class MedidataInsertComponent implements OnInit {
   
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder,private patientService: PatientService) { }
+  constructor(private fb: FormBuilder,private mediData:MedidataService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      date:["",],
-      time:["",],
-      glucoseLevel: ["",],
-      carbIntake: ["",]
+      date:["", Validators.required],
+      time:["", Validators.required],
+      glucoseLevel: ["", Validators.required],
+      carbIntake: ["", Validators.required]
     })
   }
 
   onClickSubmit(){
-    let patient: Patient = this.form.value;
-    this.patientService.addPatient(patient).subscribe( data =>{
+    let mediData: Medidata = this.form.value;
+    this.mediData.addMediData(mediData).subscribe( data =>{
       console.log(data)
     })
   }

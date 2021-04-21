@@ -4,21 +4,44 @@
             <div class="form-group">
                 <label for="nameInput">Date</label>
                 <input type="date" class="form-control" id="dateInput" formControlName="date">
+                <div class="alert alert-danger"
+                *ngIf="(form.get('date')?.dirty || form.get('date')?.touched) && !form.get('date')?.valid">
+                <div *ngIf="form.get('date')?.errors!.required">
+                  First name is required
+                </div>
             </div>
-
+            </div>
             <div class="form-group">
                 <label for="timeInput">Time</label>
                 <input type="text" class="form-control" id="timeInput" formControlName="time">
+                <div class="alert alert-danger"
+                *ngIf="(form.get('time')?.dirty || form.get('time')?.touched) && !form.get('time')?.valid">
+                <div *ngIf="form.get('time')?.errors!.required">
+                  First name is required
+                </div>
+            </div>
             </div>
 
             <div class="form-group">
                 <label for="glucoseLevelInput">Glucose Level (mg/DL)</label>
                 <input type="text" class="form-control" id="glucoseLevelInput" formControlName="glucoseLevel">
+                <div class="alert alert-danger"
+                *ngIf="(form.get('glucoseLevel')?.dirty || form.get('glucoseLevel')?.touched) && !form.get('glucoseLevel')?.valid">
+                <div *ngIf="form.get('glucoseLevel')?.errors!.required">
+                  First name is required
+                </div>
+            </div>
             </div>
 
             <div class="form-group">
                 <label for="carbIntakeInput">Carb Intake (Grams)</label>
                 <input type="text" class="form-control" id="carbIntakeInput" formControlName="carbIntake">
+                <div class="alert alert-danger"
+                *ngIf="(form.get('carbIntake')?.dirty || form.get('carbIntake')?.touched) && !form.get('carbIntake')?.valid">
+                <div *ngIf="form.get('carbIntake')?.errors!.required">
+                  First name is required
+                </div>
+                </div>
             </div>
 
             <a class="btn btn-primary" [routerLink]="['/userdata']" routerLinkActive="active">Add Record</a>
