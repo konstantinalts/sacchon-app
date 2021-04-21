@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     if (sessionStorage.getItem("credentials") == null){
       this.isLogged = false;
-      this.router.navigate(['home-page'])
+      // this.router.navigate(['home-page'])
     }
     else{
       this.isLogged = true
@@ -35,15 +35,6 @@ export class AppComponent implements OnInit, OnDestroy{
     })
 
 
-
-    if (sessionStorage.getItem("credentials2") == null){
-      this.isLoggedDoc = false;
-      this.router.navigate(['home-page'])
-    }
-    else{
-      this.isLoggedDoc = true
-      this.router.navigate(['doctor'])
-    }
 
     this.subscriptionDoc = this.loginDoctorService.responseOfAuthDoc.subscribe(data =>{
       this.isLoggedDoc = data;
