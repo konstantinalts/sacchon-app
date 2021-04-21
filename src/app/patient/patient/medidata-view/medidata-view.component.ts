@@ -7,21 +7,23 @@ import { Patient } from '../patient';
   templateUrl: './medidata-view.component.html',
   styleUrls: ['./medidata-view.component.scss']
 })
-export class MedidataViewComponent implements OnInit {
+export class MedidataViewComponent {
 
-  constructor(private patientService:PatientService) { }
+  // constructor(private patientService:PatientService) { }
 
-  patients!: Patient[];
 
-  ngOnInit(): void {
-  }
+  // patients!: Patient[];
 
-  getPatients(){
-    this.patients = [];
-    this.patientService.getPatients().subscribe(data =>{
-      this.patients = data;
-      console.log(this.patients);
-    });
-  }
+  // ngOnInit(): void {
+  // }
+
+  // getPatients(){
+  //   this.patients = [];
+  //   this.patientService.getPatients().subscribe(data =>{
+  //     this.patients = data;
+  //     console.log(this.patients);
+  //   });
+  // }
+ 
 
 }

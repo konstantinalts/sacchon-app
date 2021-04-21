@@ -1,36 +1,7 @@
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col"></th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td class="nav-link active" aria-current="page" 
-        routerLink="doctor/my-patients" routerLinkActive="active">View Records</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td class="nav-link active" aria-current="page" 
-        routerLink="doctor/my-patients" routerLinkActive="active">View Records</td>      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td class="nav-link active" aria-current="page" 
-        routerLink="doctor/my-patients" routerLinkActive="active">View Records</td>      </tr>
-    </tbody>
-  </table>
-
-
+<div class=row>
+      
+  <div class="col-md-5" style="margin-top: 5%;"> 
+    <h4>MY PATIENTS</h4>
 
   <table class="table table-striped">
     <thead>
@@ -38,7 +9,105 @@
         <th scope="col">#</th>
         <th scope="col">First Name</th>
         <th scope="col">Last Name</th>
-        <th scope="col"></th>
+        <th scope="col" >View patients' records</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+       <a class="nav-link active" aria-current="page" 
+        routerLink="doctor/charts" routerLinkActive="active">View Records</a> 
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <a class="nav-link active" aria-current="page" routerLink="home-page" 
+        routerLinkActive="active">View Records</a>
+
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- <div class="col-md-3">
+  <a class="btn btn-outline-secondary btn-lg" routerLink="/home-page" routerLinkActive="active">Add a new Record</a>     
+  <a class="nav-link active" aria-current="page" routerLink="home-page" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+  <a class="nav-link active" aria-current="page" routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+
+
+</div> -->
+
+<div class="col-md-4" style="margin-top: 5%;"> 
+  <h4>AVAILABLE PATIENTS</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col" class="nav-link active">Add patient</th>
         
       </tr>
     </thead>
@@ -47,8 +116,7 @@
         <th scope="row">1</th>
         <td>Mark</td>
         <td>Otto</td>
-        <a class="nav-link active" aria-current="page" 
-        routerLink="doctor/my-patients" routerLinkActive="active">View Records</a>
+        <a class="btn btn-outline-primary btn-lg" routerLink="/home-page" routerLinkActive="active">Add</a>     
       </tr>
       <tr>
         <th scope="row">2</th>
@@ -63,4 +131,20 @@
         routerLink="doctor/my-patients" routerLinkActive="active">View Records</td>      </tr>
     </tbody>
   </table>
+
+</div>
+
+<div class="col-md-3">             
+  <div id="card" class="card" style="margin-top: 30%;">
+    <div class="card-body">
+      <h5>Personal Info</h5>
+      <h6>Marc Otto</h6>
+      <h6>marcotto@sacchon.com</h6>
+      <h6>+306983495587</h6>
+      <h6>West 28th Street</h6>
+      <a class="btn btn-outline-primary btn-lg btn-block">Edit</a>
+    </div>
+  </div>
+</div>
+  </div>
 
