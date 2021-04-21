@@ -1,7 +1,7 @@
 <div>
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background: rgba(0,0,0,0.05);">
-        <a class="navbar-brand" href="#">Sacchon</a>
-       <!-- <a href=""> <img src="https://raw.githubusercontent.com/MariosGeni/sacchon-app/master/src/icons/Untitled-1%20(1).png" class="navbar-brand" alt="logo"> </a> -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background: rgba(0,0,0,0.05);">
+            <a class="navbar-brand" href="#">Sacchon</a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -9,35 +9,34 @@
             <ul class="navbar-nav mr-auto"></ul>
             <a class="nav-link active" aria-current="page"> 
             
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/home-page']" routerLinkActive="active">
-                Home
-            </button>
+                <!-- <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/home-page']" routerLinkActive="active">
+                    Home
+                </button> -->
 
 
             
-            
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
-                Sign-In
-            </button>
-            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
-                Register
-            </button>
-            
+                <form class="form-inline" *ngIf="!isLogged">
+                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
+                    Sign-In
+                </button>
+                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
+                    Register
+                </button>
+            </form>
+
+                      
         
-
-
-
             
-            <form class="form-inline" *ngIf="isLogged">
-                <button style="margin-right" class="mr-auto btn btn-sm btn-outline-danger" (click)="logOut()">
-                    Logout
-                </button>
-            </form>
-            <form class="form-inline" *ngIf="isLoggedDoc">
-                <button style="margin-right" class="mr-auto btn btn-sm btn-outline-danger" (click)="logOutDoc()">
-                    Logout
-                </button>
-            </form>
+                <form class="form-inline" *ngIf="isLogged">
+                    <button class="mt btn btn-sm btn-outline-danger" (click)="logOut()">
+                        Logout
+                    </button>
+                </form>
+                <form class="form-inline" *ngIf="isLoggedDoc">
+                    <button class="mr-auto btn btn-sm btn-outline-danger" (click)="logOutDoc()">
+                        Logout
+                    </button>
+                </form>
             </a>
         </div>
     </nav>

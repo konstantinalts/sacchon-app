@@ -32,7 +32,7 @@ export class LoginDoctorComponent implements OnInit {
      if(responseString == "OK"){
        username = this.loginFormDoctor.get('username')?.value;
        password = this.loginFormDoctor.get('password')?.value;
-       sessionStorage.setItem("credentialsDoc",username +":"+ password);
+       sessionStorage.setItem("credentials",username +":"+ password);
        this.router.navigate(['doctor'])
      }
      else{
