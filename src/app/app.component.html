@@ -1,32 +1,24 @@
 <div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background: rgba(0,0,0,0.05);">
-            <a class="navbar-brand" href="#">Sacchon</a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <a class="navbar-brand" href="#">Sacchon</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto"></ul>
-            <a class="nav-link active" aria-current="page"> 
-            
-                <!-- <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/home-page']" routerLinkActive="active">
-                    Home
-                </button> -->
+            <a class="nav-link active" aria-current="page">
 
-
-            
-                <form class="form-inline" *ngIf="!isLogged">
-                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login/patient_login']" routerLinkActive="active">
+                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary"
+                    [routerLink]="['/login/patient_login']" routerLinkActive="active">
                     Sign-In
                 </button>
-                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register/patient_register']" routerLinkActive="active">
+                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary"
+                    [routerLink]="['/register/patient_register']" routerLinkActive="active">
                     Register
                 </button>
-            </form>
 
-                      
-        
-            
                 <form class="form-inline" *ngIf="isLogged">
                     <button class="mt btn btn-sm btn-outline-danger" (click)="logOut()">
                         Logout
@@ -41,70 +33,4 @@
         </div>
     </nav>
 </div>
-<!-- <div class="container pt-4 mt-lg-4">
-    <div class="row"> 
-
-        <div class="col mr-3">
-            <div id="card" class="card" >
-                <img class="card-img-top" src="src\icons\blog-diabetes.png" alt="Card image cap" id="images">
-                <div class="card-body">
-                    <h4 id="h4" class="card-title">Why Us</h4>
-                    <p class="card-text text-center">We provide a complete range of services, from changing a light bulb and giving advice to small or large renovations, in order to meet all your needs.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col mr-3">
-            <div id="card" class="card">
-                <img class="card-img-top" src="/images/low_price.png" alt="Card image cap" id="images">
-                <div class="card-body">
-                    <h4 id="h4" class="card-title">Why us</h4>
-                    <p class="card-text text-center">We are a dedicated team launching this revolutionary iniatiative to improve your quality of life day to day. We believe that immediate availability of health records and trained healthcare professionals will offer you what you need in the easiest way than ever before-just with one click!
-                    </p>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-md-5">
-            
-                <div id="card" class="card">
-                    <img class="card-img-top" src="/images/tools.jpg" alt="Card image cap" id="images">
-                    <div class="card-body">
-                        <h4 id="h4" class="card-title">Why us</h4>
-                        <p class="card-text text-left">We are a dedicated team launching this revolutionary iniatiative to improve your quality of life day to day. We believe that immediate availability of health records and trained healthcare professionals will offer you what you need in the easiest way than ever before-just with one click!
-                    </div>
-                </div> 
-            
-        </div>
-
-        <div>
-            <img class="img-right" src="https://user-images.githubusercontent.com/67487647/115299130-17ec5600-a167-11eb-9719-c8f3d0c066d1.png" id="images">
-            <h5> Are you a doctor? </h5>
-           
-                <div class="container">
-                    <div class="row">
-                    
-                        <div class="col-xs-6">
-                            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary" [routerLink]="['/login']" routerLinkActive="active">
-                                Sign-In as a doctor
-                            </button>
-                            <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary" [routerLink]="['/register']" routerLinkActive="active">
-                                Register as a doctor
-                            </button>
-                        </div>
-                        
-                    
-                    </div>
-        </div>
-
-        
-
-    </div>
-</div> -->
-
-
-
-
-
 <router-outlet></router-outlet>
-

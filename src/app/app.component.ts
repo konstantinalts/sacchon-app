@@ -21,12 +21,19 @@ export class AppComponent implements OnInit, OnDestroy{
   constructor(private router:Router, private loginPatientService:LoginPatientService, private loginDoctorService:LoginDoctorService){}
 
   ngOnInit(): void {
-    if (sessionStorage.getItem("credentials") == null){
+    if (sessionStorage.getItem("credentials") == null && sessionStorage.getItem("credentials2") == null){
       this.isLogged = false;
-      // this.router.navigate(['home-page'])
+      this.isLoggedDoc = false;
+      this.router.navigate(['home-page'])
+    }
+    else if(sessionStorage.getItem("credentials") == null && sessionStorage.getItem("credentials2") != null){
+      this.isLogged = false
+      this.isLoggedDoc = true
+      this.router.navigate(['doctor'])
     }
     else{
       this.isLogged = true
+      this.isLoggedDoc = false
       this.router.navigate(['userdata'])
     }
 
