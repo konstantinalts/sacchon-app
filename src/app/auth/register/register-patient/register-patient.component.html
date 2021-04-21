@@ -1,190 +1,134 @@
 <div class="row">
   <div class="col-mid-7 offset-md-5">
     <h3>Register</h3>
-    
-    <form (ngSubmit)="onClickSubmit()">
+    <form [formGroup]="register" (ngSubmit)="onClickSubmit()">
       <div class="form-group">
         <label for="registerFName" class="form-label">First name</label>
-        <input 
-        type="text"
-        class="form-control" 
-        name="fname" 
-        ngModel 
-        required 
-        minlength="3"
-        maxlength="15"
-        #fname="ngModel" 
-        id="registerFName"
-        placeholder="Enter your firstname">
-        <div
-        class="alert alert-danger"
-        *ngIf="fname.dirty || fname.touched">
-        <div *ngIf="fname.errors!.required">
-          First name is required
-        </div>
-        <div *ngIf="fname.errors!.minlength">
-          First name should be minimum {{ fname.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="fname.errors!.maxlength">
-          First name should be maximum {{ fname.errors!.maxlength.requiredLength }} characters
-        </div>
+        <input type="text" class="form-control" name="fname" formControlName="fname" id="registerFName"
+          placeholder="Enter your firstname">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('fname')?.dirty || register.get('fname')?.touched) && !register.get('fname')?.valid">
+          <div *ngIf="register.get('fname')?.errors!.required">
+            First name is required
+          </div>
+          <div *ngIf="register.get('fname')?.errors!.minlength">
+            First name should be minimum {{ register.get('fname')?.errors!.minlength.requiredLength }} characters
+          </div>
+          <div *ngIf="register.get('fname')?.errors!.maxlength">
+            First name should be maximum {{ register.get('fname')?.errors!.maxlength.requiredLength }} characters
+          </div>
         </div>
       </div>
       <div class="form-group">
         <label for="registerLName" class="form-label">Last name</label>
-        <input 
-        type="text" 
-        class="form-control" 
-        name="lname" 
-        ngModel 
-        required 
-        minlength="3"
-        maxlength="15"
-        #lname="ngModel" 
-        id="registerLName"
-        placeholder="Enter your firstname">
-        <div
-        class="alert alert-danger"
-        *ngIf="lname.dirty || lname.touched">
-        <div *ngIf="lname.errors!.required">
-          Last name is required
-        </div>
-        <div *ngIf="lname.errors!.minlength">
-          Last name should be minimum {{ lname.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="lname.errors!.maxlength">
-          Last name should be maximum {{ lname.errors!.maxlength.requiredLength }} characters
-        </div>
+        <input type="text" class="form-control" name="lname" formControlName="lname" id="registerLName"
+          placeholder="Enter your firstname">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('lname')?.dirty || register.get('lname')?.touched) && !register.get('lname')?.valid">
+          <div *ngIf="register.get('lname')?.errors!.required">
+            Last name is required
+          </div>
+          <div *ngIf="register.get('lname')?.errors!.minlength">
+            Last name should be minimum {{ register.get('lname')?.errors!.minlength.requiredLength }} characters
+          </div>
+          <div *ngIf="register.get('lname')?.errors!.maxlength">
+            Last name should be maximum {{ register.get('lname')?.errors!.maxlength.requiredLength }} characters
+          </div>
+
         </div>
       </div>
       <div class="form-group">
         <label for="registerBday" class="form-label">Birthdate</label>
-        <input 
-        type="date" 
-        class="form-control" 
-        name="birthdate" 
-        ngModel 
-        required 
-        #birthdate="ngModel" 
-        id="registerBday"
-        placeholder="Enter your birthdate">
-        <div
-        class="alert alert-danger"
-        *ngIf="birthdate.dirty || birthdate.touched">
-        <div *ngIf="birthdate.errors!.required">
-          Birthdate is required
+        <input type="date" class="form-control" name="birthdate" formControlName="birthdate" id="registerBday"
+          placeholder="Enter your birthdate">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('birthdate')?.dirty || register.get('birthdate')?.touched) && !register.get('birthdate')?.valid">
+          <div *ngIf="register.get('birthdate')?.errors!.required">
+            Birthdate is required
+          </div>
         </div>
+      </div>
+      <div class="form-group">
+        <label for="registerAddress" class="form-label">Address</label>
+        <input type="string" class="form-control" name="address" formControlName="address" id="registerAddress"
+          placeholder="Enter your address">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('address')?.dirty || register.get('address')?.touched) && !register.get('address')?.valid">
+          <div *ngIf="register.get('address')?.errors!.required">
+            Address is required
+          </div>
+          <div *ngIf="register.get('address')?.errors!.minlength">
+            Address should be minimum {{ register.get('address')?.errors!.minlength.requiredLength }} characters
+          </div>
+          <div *ngIf="register.get('address')?.errors!.maxlength">
+            Address should be maximum {{ register.get('address')?.errors!.maxlength.requiredLength }} characters
+          </div>
         </div>
       </div>
       <div class="form-group">
         <label for="registerTelephone" class="form-label">Telephone</label>
-        <input 
-        type="text" 
-        class="form-control" 
-        name="telephone" 
-        ngModel 
-        required
-        minlength="10"
-        maxlength="10" 
-        #telephone="ngModel"
-        id="registerTelephone" 
-        placeholder="Enter your telephone">
-        <div
-        class="alert alert-danger"
-        *ngIf="telephone.dirty || telephone.touched">
-        <div *ngIf="telephone.errors!.required">
-          Telephone is required
-        </div>
-        <div *ngIf="telephone.errors!.minlength">
-          Telephone should be minimum {{ telephone.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="telephone.errors!.maxlength">
-          Telephone should be maximum {{ telephone.errors!.maxlength.requiredLength }} characters
-        </div>
+        <input type="text" class="form-control" name="telephone" formControlName="telephone" id="registerTelephone"
+          placeholder="Enter your telephone">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('telephone')?.dirty || register.get('telephone')?.touched) && !register.get('telephone')?.valid">
+          <div *ngIf="register.get('telephone')?.errors!.required">
+            Telephone is required
+          </div>
+          <div *ngIf="register.get('telephone')?.errors!.minlength">
+            Telephone should be minimum {{ register.get('telephone')?.errors!.minlength.requiredLength }} characters
+          </div>
+          <div *ngIf="register.get('telephone')?.errors!.maxlength">
+            Telephone should be maximum {{ register.get('telephone')?.errors!.maxlength.requiredLength }} characters
+          </div>
         </div>
       </div>
       <div class="form-group">
         <label for="registerEmail" class="form-label">Email</label>
-        <input 
-        type="email" 
-        class="form-control" 
-        name="email" 
-        ngModel 
-        required 
-        email
-        #email="ngModel" 
-        id="registerEmail"
-        placeholder="Enter your email">
-        <div
-        class="alert alert-danger"
-        *ngIf="email.dirty || email.touched">
-        <div *ngIf="email.errors!.required">
-          Email is required
-        </div>
-        <div *ngIf="email.errors!.email">
-          example@example.com
-        </div>
+        <input type="email" class="form-control" name="email" formControlName="email" id="registerEmail"
+          placeholder="Enter your email">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('email')?.dirty || register.get('email')?.touched) && !register.get('email')?.valid">
+          <div *ngIf="register.get('email')?.errors!.required">
+            Email is required
+          </div>
+          <div *ngIf="register.get('email')?.errors!.email">
+            example@example.com
+          </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="registerUsername" class="form-label">Username</label>
-        <input 
-        type="text" 
-        class="form-control" 
-        name="username" 
-        ngModel 
-        required 
-        minlength="5"
-        maxlength="15"
-        #username="ngModel"
-        id="registerUsername" 
-        placeholder="Enter your username">
-        <div
-        class="alert alert-danger"
-        *ngIf="username.dirty || username.touched">
-        <div *ngIf="username.errors!.required">
-          Username is required
-        </div>
-        <div *ngIf="username.errors!.minlength">
-          Usernameshould be minimum {{ username.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="username.errors!.maxlength">
-          Username should be maximum {{ username.errors!.maxlength.requiredLength }} characters
-        </div>
+        <label for="registerEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" formControlName="email" id="registerEmail"
+          placeholder="Enter your email">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('email')?.dirty || register.get('email')?.touched) && !register.get('email')?.valid">
+          <div *ngIf="register.get('email')?.errors!.required">
+            Email is required
+          </div>
+          <div *ngIf="register.get('email')?.errors!.email">
+            example@example.com
+          </div>
         </div>
       </div>
       <div class="form-group">
         <label for="registerPassword" class="form-label">Password</label>
-        <input 
-        type="password" 
-        class="form-control" 
-        name="password" 
-        ngModel 
-        required 
-        minlength="8"
-        maxlength="20"
-        #password="ngModel"
-        id="registerPassword" placeholder="Enter your password">
-        <div
-        class="alert alert-danger"
-        *ngIf="password.dirty || password.touched">
-        <div *ngIf="password.errors!.required">
-          Password is required
-        </div>
-        <div *ngIf="password.errors!.minlength">
-          Password should be minimum {{ password.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="password.errors!.maxlength">
-          Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
-        </div>
+        <input type="password" class="form-control" name="password" formControlName="password" id="registerPassword"
+          placeholder="Enter your password">
+        <div class="alert alert-danger"
+          *ngIf="(register.get('password')?.dirty || register.get('password')?.touched) && !register.get('password')?.valid">
+          <div *ngIf="register.get('password')?.errors!.required">
+            Password is required
+          </div>
+          <div *ngIf="register.get('password')?.errors!.minlength">
+            Password should be minimum {{ register.get('password')?.errors!.minlength.requiredLength }} characters
+          </div>
+          <div *ngIf="register.get('password')?.errors!.maxlength">
+            Password should be maximum {{ register.get('password')?.errors!.maxlength.requiredLength }} characters
+          </div>
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Register</button>
     </form>
-  
+
   </div>
 </div>
-
-<hr>
-
-<hr>

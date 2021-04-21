@@ -1,9 +1,10 @@
 export interface PatientRegister {
-    fname: string,
-    lname: string,
-    birthdate: Date,
-    telephone: number,
-    email: string,
-    usename: string,
-    password: string
+    fname: string;
+    lname: string;
+    birthdate: string;
+    address: string;
+    telephone: string;
+    email: string;
+    username: string;
+    password: string;
 }

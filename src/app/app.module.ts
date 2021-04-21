@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { HomeModule } from './home/home.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
+import { DoctorModule } from './doctor/doctor.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
     AuthRoutingModule,
     AuthModule,
     PatientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DoctorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
