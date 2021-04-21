@@ -10,12 +10,12 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class MedidataViewComponent {
 
-  // constructor(private patientService:PatientService) { }
+  constructor(private patientService:PatientService) { }
 
 
-  // patients!: Patient[];
+  patients!: Patient[];
 
-<<<<<<< HEAD
+
   getPatients(){
     sessionStorage.setItem("credentials","user:123456789")
     this.patients = [];
@@ -25,10 +25,10 @@ export class MedidataViewComponent {
       {headers:new HttpHeaders({'Authorization': 'Basic ' + btoa(sessionStorage.getItem("credentials")!)})}
     })
   }
-=======
+
   // ngOnInit(): void {
   // }
->>>>>>> 9e6c257c0ac0ace79dcdd837708be4113e968ffd
+
 
   // getPatients(){
   //   this.patients = [];
