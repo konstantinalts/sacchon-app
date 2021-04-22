@@ -32,14 +32,16 @@ export class LoginDoctorComponent implements OnInit {
      let login: Login = this.loginFormDoctor.value;
     
      this.loginDoctorService.authenticationD(login).subscribe(response=>{
-      if(response == "OK"){
+      if(response.code === 200){
         username = this.loginFormDoctor.get('username')?.value;
         password = this.loginFormDoctor.get('password')?.value;
         sessionStorage.setItem("credentials2",username +":"+ password);
         this.router.navigate(['doctor'])
+        console.log(response);
       }
       else{
         alert("Try again.Wrong username or password");
+        console.log(response);
       }
      })
    

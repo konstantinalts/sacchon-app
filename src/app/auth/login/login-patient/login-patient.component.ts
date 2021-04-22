@@ -36,14 +36,16 @@ export class LoginPatientComponent implements OnInit {
      let login: Login = this.loginFormPatient.value;
 
      this.loginPatientService.authenticationP(login).subscribe(response=>{
-      if(response == "OK"){
+      if(response.code == 401){
         username = this.loginFormPatient.get('username')?.value;
         password = this.loginFormPatient.get('password')?.value;
         sessionStorage.setItem("credentials",username +":"+ password);
         this.router.navigate(['userdata'])
+        console.log(response);
       }
       else{
         alert("Try again.Wrong username or password");
+        console.log(response);
       }
      })
    }

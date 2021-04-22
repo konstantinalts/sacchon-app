@@ -17,8 +17,8 @@ export class LoginPatientService {
   private readonly baseUrl= 'http://localhost:9000/sacchon'
 
   authenticationP(values:Login): Observable<any>{
-  
-    return this.http.post<any>(`${this.baseUrl}/login_patient`,
+    console.log(values)
+    return this.http.post<any>(`${this.baseUrl}/login/patient`,
     values)
 
   }

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-mid-7 offset-md-5">
     <h3>Register</h3>
-    <form [formGroup]!="register" (ngSubmit)="onClickSubmit()">
+    <form [formGroup]="register" (ngSubmit)="onClickSubmit()">
       <div class="form-group">
         <label for="registerFName" class="form-label">First name</label>
         <input type="text" class="form-control" name="fname" formControlName="fname" id="registerFName"

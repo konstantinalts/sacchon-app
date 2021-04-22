@@ -65,15 +65,15 @@
       <div class="form-group mr-2">
         <label for="password" class="form-label">Password</label>
         <input class="form-control" type="password" id="password" formControlName="password">
-        <div class="alert alert-danger" *ngIf="((loginFormDoctor.get('passwrord')?.dirty || loginFormDoctor.get('passwrord')?.touched) && !loginFormDoctor.get('passwrord')?.valid)">
-          <div *ngIf="loginFormDoctor.get('passwrord')?.errors!.required">
+        <div class="alert alert-danger" *ngIf="((loginFormDoctor.get('password')?.dirty || loginFormDoctor.get('password')?.touched) && !loginFormDoctor.get('passwrord')?.valid)">
+          <div *ngIf="loginFormDoctor.get('password')?.errors!.required">
             Password is required
           </div>
-          <div *ngIf="loginFormDoctor.get('passwrord')?.errors!.minlength">
-            Password should be minimum {{ loginFormDoctor.get('passwrord')?.errors!.minlength.requiredLength}} characters
+          <div *ngIf="loginFormDoctor.get('password')?.errors!.minlength">
+            Password should be minimum {{ loginFormDoctor.get('password')?.errors!.minlength.requiredLength}} characters
           </div>
-          <div *ngIf="loginFormDoctor.get('passwrord')?.errors!.maxlength">
-            Password should be maximum {{ loginFormDoctor.get('passwrord')?.errors!.maxlength.requiredLength }} characters
+          <div *ngIf="loginFormDoctor.get('password')?.errors!.maxlength">
+            Password should be maximum {{ loginFormDoctor.get('password')?.errors!.maxlength.requiredLength }} characters
           </div>
         </div>
       </div>

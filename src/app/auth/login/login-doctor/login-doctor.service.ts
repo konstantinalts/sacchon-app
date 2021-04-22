@@ -18,7 +18,7 @@ export class LoginDoctorService {
 
   authenticationD(values:Login): Observable<any>{
     console.log(values)
-     return this.http.post<any>(`${this.baseUrl}/login_doctor`,
+     return this.http.post<any>(`${this.baseUrl}/login/doctor`,
     values)
 
   }
