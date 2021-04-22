@@ -1,18 +1,46 @@
-<button class="btn btn-primary" (click)="getPatients()">GET YOUR RECORDS</button>
 <div class="row">
+  <div class="col-sm-6" style="margin-top: 40px;">
+  <button class="btn btn-primary" style="margin-left: 45%; margin-bottom: 50px;" (click)="getPatients()">Show records</button>
+  <div class="row" style="margin-left: 20px;">
     <div *ngFor="let patient of patients">
-        <div class="col-sm-4"></div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              
-              <p class="card-text">Date: {{patient.date | date:'MM/dd/yyyy'}}</p>
-              <p class="card-text">Time: {{patient.time}}</p>
-              <p class="card-text">Glucose level: {{patient.glucoseLevel}}</p>
-              <p class="card-text">Carb Intake: {{patient.carbIntake}}</p>
+      <div class="col-sm-1" ></div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+
+          <p class="card-text">Date: {{patient.date | date:'MM/dd/yyyy'}}</p>
+          <p class="card-text">Time: {{patient.time}}</p>
+          <p class="card-text">Glucose level: {{patient.glucoseLevel}}</p>
+          <p class="card-text">Carb Intake: {{patient.carbIntake}}</p>
 
 
-            </div>
-          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
+<div class="col-sm-6" style="margin-top: 40px;">
+  <button class="btn btn-primary" style="margin-left: 45%; margin-bottom: 50px;" (click)="getAdvices()">Show advices</button>
+  <div class="row" style="margin-right: 5px;">
+    <div *ngFor="let advice of advices">
+      <div class="col-sm-1">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+
+            <p class="card-text">Date: {{advice.date | date:'MM/dd/yyyy'}}</p>
+            <p class="card-text">Description: {{advice.description}}</p>
+            <p class="card-text">Dosage: {{advice.dosage}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  <!-- <div *ngFor="let doctor of doctors">
+  <tr>
+      <td>{{doctor.fname}}</td>
+      <td>{{doctor.lname}}</td>
+  </tr>
+</div> -->

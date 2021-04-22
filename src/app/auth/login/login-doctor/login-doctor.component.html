@@ -4,7 +4,7 @@
     <form [formGroup]="loginFormDoctor" (ngSubmit)="logInDoctor()">
       <div class="form-group mr-2">
         <label for="username" class="form-label">Username</label>
-        <input class="form-control" type="text" id="username" formControlName="username">
+        <input class="form-control" type="text" id="username" formControlName="username" placeholder="Username">
       </div>
       <div class="alert alert-danger" *ngIf="(loginFormDoctor.get('username')?.dirty || loginFormDoctor.get('username')?.touched) && !loginFormDoctor.get('username')?.valid">
         <div *ngIf="loginFormDoctor.get('username')?.errors!.required">
@@ -22,8 +22,8 @@
 
       <div class="form-group mr-2">
         <label for="password" class="form-label">Password</label>
-        <input class="form-control" type="password" id="password" formControlName="password">
-        <div class="alert alert-danger" *ngIf="(loginFormDoctor.get('password')?.dirty || loginFormDoctor.get('password')?.touched) && !loginFormDoctor.get('passwrord')?.valid">
+        <input class="form-control" type="password" id="password" formControlName="password" placeholder="Password">
+        <div class="alert alert-danger" *ngIf="(loginFormDoctor.get('password')?.dirty || loginFormDoctor.get('password')?.touched) && !loginFormDoctor.get('password')?.valid">
           <div *ngIf="loginFormDoctor.get('password')?.errors!.required">
             Password is required
           </div>

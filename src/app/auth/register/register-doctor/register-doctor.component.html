@@ -97,16 +97,19 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="registerEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" formControlName="email" id="registerEmail"
-          placeholder="Enter your email">
+        <label for="registerUsername" class="form-label">Username</label>
+        <input type="text" class="form-control" name="usernmae" formControlName="username" id="registerUsername"
+          placeholder="Enter your username">
         <div class="alert alert-danger"
-          *ngIf="(register.get('email')?.dirty || register.get('email')?.touched) && !register.get('email')?.valid">
-          <div *ngIf="register.get('email')?.errors!.required">
-            Email is required
+          *ngIf="(register.get('username')?.dirty || register.get('username')?.touched) && !register.get('usernmae')?.valid">
+          <div *ngIf="register.get('username')?.errors!.required">
+            Username is required
           </div>
-          <div *ngIf="register.get('email')?.errors!.email">
-            example@example.com
+          <div *ngIf="register.get('username')?.errors!.minlength">
+            Username should be minimum {{register.get('username')?.errors!.minlength.requiredLength}} characters
+          </div>
+          <div *ngIf="register.get('username')?.errors!.maxlength">
+            Username should be minimum {{register.get('username')?.errors!.maxlength.requiredLength}} characters
           </div>
         </div>
       </div>

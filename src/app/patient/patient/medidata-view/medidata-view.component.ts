@@ -1,3 +1,5 @@
+import { AdvicesService } from './../advices.service';
+import { Advices } from './../advices';
 import { Router } from '@angular/router';
 import { PatientService } from './../patient.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,10 +13,13 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class MedidataViewComponent implements OnInit{
 
-  constructor(private patientService:PatientService, private router:Router) { }
+
+  constructor(private patientService:PatientService,private adviceService:AdvicesService, private router:Router) { }
 
 
   patients!: Patient[];
+
+  advices!: Advices[];
 
 
   // getPatients(){
@@ -25,6 +30,13 @@ export class MedidataViewComponent implements OnInit{
     
   }
 
+  getAdvices(){
+    this.advices = [];
+    this.adviceService.getAdvices().subscribe(data => {
+      this.advices = data.data;
+      console.log(this.advices);
+    })
+  }
 
   getPatients(){
     this.patients = [];
