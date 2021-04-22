@@ -3,6 +3,7 @@ import { LoginPatientService } from './login-patient.service';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Login } from '../login';
 
 
 @Component({
@@ -32,16 +33,18 @@ export class LoginPatientComponent implements OnInit {
    logInPatient(){
      let username: string;
      let password: string;
-     let responseString = this.loginPatientService.authenticationP(this.loginFormPatient.value);
-     if(responseString == "OK"){
-       username = this.loginFormPatient.get('username')?.value;
-       password = this.loginFormPatient.get('password')?.value;
-       sessionStorage.setItem("credentials",username +":"+ password);
-       this.router.navigate(['userdata'])
-     }
-     else{
-       alert("Try again.Wrong username or password");
-     }
+     let login: Login = this.loginFormPatient.value;
+     this.loginPatientService.authenticationP(login).subscribe(response=>{
+      if(response == "OK"){
+        username = this.loginFormPatient.get('username')?.value;
+        password = this.loginFormPatient.get('password')?.value;
+        sessionStorage.setItem("credentials",username +":"+ password);
+        this.router.navigate(['doctor'])
+      }
+      else{
+        alert("Try again.Wrong username or password");
+      }
+     })
    }
 
 }

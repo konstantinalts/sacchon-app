@@ -1,60 +1,40 @@
 <div class="row">
   <div class="col-mid-6 offset-md-5 mt-5">
     <h3>Login</h3>
-    <form [formGroup]="loginFormDoctor" (ngSubmit)="logInDoctor()">
+    <form (ngSubmit)="logInDoctor()">
       <div class="form-group">
         <label for="username" class="form-label">Username</label>
-        <input 
-          required
-          minlength="4"
-          maxlength="15"
-          ngModel
-          name="username"
-          #username="ngModel"
-          id="username"
-          type="text"
-          class="form-control">
-        <div
-        class="alert alert-danger"
-        *ngIf="username.dirty || username.touched">
-        <div *ngIf="username.errors!.required">
-          Username is required
-        </div>
-        <div *ngIf="username.errors!.minlength">
-          Username should be minimum {{ username.errors!.minlength.requiredLength }} characters
-        </div>
-        <div *ngIf="username.errors!.maxlength">
-          Username should be maximum {{ username.errors!.maxlength.requiredLength }} characters
-        </div>
+        <input required minlength="4" maxlength="15" ngModel name="username" #username="ngModel" id="username"
+          type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="(username.dirty || username.touched) && !username.valid">
+          <div *ngIf="username.errors!.required">
+            Username is required
+          </div>
+          <div *ngIf="username.errors!.minlength">
+            Username should be minimum {{ username.errors!.minlength.requiredLength }} characters
+          </div>
+          <div *ngIf="username.errors!.maxlength">
+            Username should be maximum {{ username.errors!.maxlength.requiredLength }} characters
+          </div>
         </div>
       </div>
       <div class="form-group">
         <label for="loginPassword" class="form-label">Password</label>
-        <input
-          required
-          minlength="8"
-          maxlength="20"
-          ngModel
-          name="password"
-          #password="ngModel"
-          id="password"
-          type="password"
-          class="form-control">
-      <div
-        class="alert alert-danger"
-        *ngIf="password.touched && !password.valid">
-        <div *ngIf="password.errors!.required">
-          Password is required
-        </div>
-        <div *ngIf="password.errors!.minlength">
-          Password should be minimum {{ password.errors!.minlength.requiredLength}} characters
-        </div>
-        <div *ngIf="password.errors!.maxlength">
-          Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
+        <input required minlength="8" maxlength="20" ngModel name="password" #password="ngModel" id="password"
+          type="password" class="form-control">
+        <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+          <div *ngIf="password.errors!.required">
+            Password is required
+          </div>
+          <div *ngIf="password.errors!.minlength">
+            Password should be minimum {{ password.errors!.minlength.requiredLength}} characters
+          </div>
+          <div *ngIf="password.errors!.maxlength">
+            Password should be maximum {{ password.errors!.maxlength.requiredLength }} characters
+          </div>
         </div>
       </div>
-      </div>
-      <button type="submit"class="btn btn-primary">Sign-in</button>
+      <button type="submit" class="btn btn-primary">Sign-in</button>
     </form>
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Login } from '../login';
 import { LoginDoctorService } from './login-doctor.service';
 
 @Component({
@@ -28,16 +29,20 @@ export class LoginDoctorComponent implements OnInit {
    logInDoctor(){
      let username: string;
      let password: string;
-     let responseString = this.loginDoctorService.authenticationD(this.loginFormDoctor.value);
-     if(responseString == "OK"){
-       username = this.loginFormDoctor.get('username')?.value;
-       password = this.loginFormDoctor.get('password')?.value;
-       sessionStorage.setItem("credentials2",username +":"+ password);
-       this.router.navigate(['doctor'])
-     }
-     else{
-       alert("Try again.Wrong username or password");
-     }
+     let login: Login = this.loginFormDoctor.value;
+     console.log(this.loginFormDoctor.get('username')?.value)
+     this.loginDoctorService.authenticationD(login).subscribe(response=>{
+      if(response == "OK"){
+        username = this.loginFormDoctor.get('username')?.value;
+        password = this.loginFormDoctor.get('password')?.value;
+        sessionStorage.setItem("credentials2",username +":"+ password);
+        this.router.navigate(['doctor'])
+      }
+      else{
+        alert("Try again.Wrong username or password");
+      }
+     })
+   
    }
   onSubmit(f: NgForm) {
     console.log(f.value);

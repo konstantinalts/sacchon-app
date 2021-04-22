@@ -25,15 +25,14 @@ const routes: Routes = [
   { path: 'doctor/available-patients', component: AvailablePatientsComponent},
   { path: 'doctor/my-patients/my-patients-data', component: MyPatientsDataComponent},
   { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'home-page', component: HomePageComponent},
   { path: '',redirectTo: '/home-page', pathMatch:'full'},
   { path: 'login/patient_login', component: LoginPatientComponent },
   { path: 'login/doctor_login', component: LoginDoctorComponent },
   { path: 'register/patient_register', component: RegisterPatientComponent },
   { path: 'register/doctor_register', component: RegisterDoctorComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'register', component: RegisterComponent }
+  
 
 
 
