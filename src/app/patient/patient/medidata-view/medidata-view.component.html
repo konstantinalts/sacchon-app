@@ -1,12 +1,11 @@
-<!-- <button class="btn btn-primary"(click)="getPatients()">GET YOUR RECORDS</button>
+<button class="btn btn-primary" (click)="getPatients()">GET YOUR RECORDS</button>
 <div class="row">
     <div *ngFor="let patient of patients">
-         gia na vgainoun 3 products ana seira 
         <div class="col-sm-4"></div>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
               
-              <p class="card-text">Date: {{patient.date}}</p>
+              <p class="card-text">Date: {{patient.date | date:'MM/dd/yyyy'}}</p>
               <p class="card-text">Time: {{patient.time}}</p>
               <p class="card-text">Glucose level: {{patient.glucoseLevel}}</p>
               <p class="card-text">Carb Intake: {{patient.carbIntake}}</p>
@@ -15,5 +14,5 @@
             </div>
           </div>
     </div>
-</div> -->
+</div>
 

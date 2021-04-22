@@ -36,6 +36,7 @@ export class LoginDoctorComponent implements OnInit {
         username = this.loginFormDoctor.get('username')?.value;
         password = this.loginFormDoctor.get('password')?.value;
         sessionStorage.setItem("credentials2",username +":"+ password);
+        this.loginDoctorService.logged();
         this.router.navigate(['doctor'])
         console.log(response);
       }

@@ -9,7 +9,6 @@ import { PatientComponent } from './patient/patient/patient.component';
 import { MedidataInsertComponent } from './patient/patient/medidata-insert/medidata-insert.component';
 import { MyPatientsComponent } from './doctor/doctor/my-patients/my-patients.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { LoginComponent } from './auth/login/login.component';
 import { LoginPatientComponent } from './auth/login/login-patient/login-patient.component';
 import { LoginDoctorComponent } from './auth/login/login-doctor/login-doctor.component';
 import { RegisterPatientComponent } from './auth/register/register-patient/register-patient.component';
@@ -17,7 +16,7 @@ import { RegisterDoctorComponent } from './auth/register/register-doctor/registe
 
 
 const routes: Routes = [
-  { path: 'userdata/medidata-view', component: MedidataViewComponent },
+  { path: 'doctor/medidata-view', component: MedidataViewComponent },
   { path: 'userdata/medidata-insert', component: MedidataInsertComponent },
   { path: 'userdata', component: PatientComponent},
   { path: 'doctor', component: DoctorComponent},

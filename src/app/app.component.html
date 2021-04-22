@@ -11,16 +11,17 @@
 
             <a class="nav-link active" aria-current="page">
                 
-                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary"
+                <button type="submit" *ngIf="!isLoggedDoc" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary"
                     [routerLink]="['/login/patient_login']" routerLinkActive="active">
                     Sign-In
                 </button>
                 
-                <button type="submit" style="margin-right" class="mt-2 btn btn-sm btn-primary"
+                <button type="submit" style="margin-right" *ngIf="!isLoggedDoc" class="mt-2 btn btn-sm btn-primary"
                     [routerLink]="['/register/patient_register']" routerLinkActive="active">
                     Register
                 </button>
 
+                
                 <form class="form-inline" *ngIf="isLogged">
                     <button class="mt btn btn-sm btn-outline-danger" (click)="logOut()">
                         Logout

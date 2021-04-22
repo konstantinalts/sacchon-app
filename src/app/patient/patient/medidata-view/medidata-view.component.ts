@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { PatientService } from './../patient.service';
 import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
@@ -8,35 +9,30 @@ import { HttpHeaders } from '@angular/common/http';
   templateUrl: './medidata-view.component.html',
   styleUrls: ['./medidata-view.component.scss']
 })
-export class MedidataViewComponent {
+export class MedidataViewComponent implements OnInit{
 
-  constructor(private patientService:PatientService) { }
+  constructor(private patientService:PatientService, private router:Router) { }
 
 
   patients!: Patient[];
 
 
-  getPatients(){
-    sessionStorage.setItem("credentials","admin:admin")
-    this.patients = [];
-    this.patientService.getPatients().subscribe(data =>{
-      this.patients = data;
-      console.log(this.patients),
-      {headers:new HttpHeaders({'Authorization': 'Basic ' + btoa(sessionStorage.getItem("credentials")!)})}
-    })
+  // getPatients(){
+    
+  // }
+
+  ngOnInit() {
+    
   }
 
-  // ngOnInit(): void {
-  // }
 
-
-  // getPatients(){
-  //   this.patients = [];
-  //   this.patientService.getPatients().subscribe(data =>{
-  //     this.patients = data;
-  //     console.log(this.patients);
-  //   });
-  // }
+  getPatients(){
+    this.patients = [];
+    this.patientService.getPatients().subscribe(data =>{
+      this.patients = data.data;
+      console.log(this.patients);
+    });
+  }
  
 
 }

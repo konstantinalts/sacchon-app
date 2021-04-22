@@ -22,4 +22,9 @@ export class LoginDoctorService {
     values)
 
   }
+
+  logged(){
+    this.responseOfAuthDoc.next(true);
+  }
+
 }
