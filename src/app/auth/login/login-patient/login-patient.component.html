@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-mid-6 offset-md-5 mt-5">
     <h3>Login</h3>
     <form [formGroup]="loginFormPatient" (ngSubmit)="logInPatient()">
@@ -57,4 +57,14 @@
       <button type="submit"class="btn btn-primary">Sign-in</button>
     </form>
   </div>
-</div>
+</div> -->
+
+<form [formGroup]="loginFormPatient" (ngSubmit)="logInPatient()">
+  <div class="form-group mr-2">
+    <input class="form-control" type="text" id="username" formControlName="username">
+  </div>
+  <div class="form-group mr-2">
+    <input class="form-control" type="password" id="password" formControlName="password">
+    <button class="btn btn-primary">Sing-in </button>
+  </div>
+</form>

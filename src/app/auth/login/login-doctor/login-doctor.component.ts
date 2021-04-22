@@ -30,7 +30,7 @@ export class LoginDoctorComponent implements OnInit {
      let username: string;
      let password: string;
      let login: Login = this.loginFormDoctor.value;
-     console.log(this.loginFormDoctor.get('username')?.value)
+    
      this.loginDoctorService.authenticationD(login).subscribe(response=>{
       if(response == "OK"){
         username = this.loginFormDoctor.get('username')?.value;
@@ -44,9 +44,6 @@ export class LoginDoctorComponent implements OnInit {
      })
    
    }
-  onSubmit(f: NgForm) {
-    console.log(f.value);
-    console.log(f.valid);
-  }
+
 
 }
