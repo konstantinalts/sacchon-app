@@ -15,6 +15,7 @@ import { LoginDoctorComponent } from './auth/login/login-doctor/login-doctor.com
 import { RegisterPatientComponent } from './auth/register/register-patient/register-patient.component';
 import { RegisterDoctorComponent } from './auth/register/register-doctor/register-doctor.component';
 
+
 const routes: Routes = [
   { path: 'userdata/medidata-view', component: MedidataViewComponent },
   { path: 'userdata/medidata-insert', component: MedidataInsertComponent },

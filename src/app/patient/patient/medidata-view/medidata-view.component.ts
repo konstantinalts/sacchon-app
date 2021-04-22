@@ -17,7 +17,7 @@ export class MedidataViewComponent {
 
 
   getPatients(){
-    sessionStorage.setItem("credentials","user:123456789")
+    sessionStorage.setItem("credentials","admin:admin")
     this.patients = [];
     this.patientService.getPatients().subscribe(data =>{
       this.patients = data;
