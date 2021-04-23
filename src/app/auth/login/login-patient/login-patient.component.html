@@ -35,8 +35,14 @@
           </div>
         </div>
       </div>
-      
-        <button class="btn btn-primary" style="margin-left: 28%;">Sign-in </button>
+      <div class="row">
+      <div class="col-6">
+        <button [routerLink]="['/userdata']" routerLinkActive="active" class="btn btn-primary">Login <i class="bi bi-arrow-right-circle"></i></button>
+      </div>
+      <div class="col">
+        <button class="btn btn-secondary" [routerLink]="['']" routerLinkActive="active" style="margin-left: 25%;">Back</button>
+      </div>
+      </div>
     </form>
   </div>
 </div>

@@ -36,7 +36,7 @@ export class LoginPatientComponent implements OnInit {
      let login: Login = this.loginFormPatient.value;
 
      this.loginPatientService.authenticationP(login).subscribe(response=>{
-      if(response.code == 401){
+      if(response.code === 200){
         username = this.loginFormPatient.get('username')?.value;
         password = this.loginFormPatient.get('password')?.value;
         sessionStorage.setItem("credentials",username +":"+ password);

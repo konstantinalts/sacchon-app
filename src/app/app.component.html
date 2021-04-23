@@ -13,7 +13,7 @@
                 
                 <button type="submit" *ngIf="!isLoggedDoc" style="margin-right" class="mt-2 btn btn-sm btn-outline secondary"
                     [routerLink]="['/login/patient_login']" routerLinkActive="active">
-                    Sign-In
+                    Sign-In <i class="bi bi-box-arrow-in-right"></i>
                 </button>
                 
                 <button type="submit" style="margin-right" *ngIf="!isLoggedDoc" class="mt-2 btn btn-sm btn-primary"
@@ -24,12 +24,12 @@
                 
                 <form class="form-inline" *ngIf="isLogged">
                     <button class="mt btn btn-sm btn-outline-danger" (click)="logOut()">
-                        Logout
+                        Logout<i class="bi bi-arrow-bar-left"></i>
                     </button>
                 </form>
                 <form class="form-inline" *ngIf="isLoggedDoc">
                     <button class="mr-auto btn btn-sm btn-outline-danger" (click)="logOutDoc()">
-                        Logout
+                        <i class="bi bi-arrow-bar-left"></i> Logout
                     </button>
                 </form>
 
